@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <link rel="stylesheet" href="wirter.css">
+    
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+<script>
+
+
+    window.onload = function() {
+        document.body.classList.add('loaded');
+
+    };
+
+
+
+    function changeImageForDiv(divClass) {
+    const representDiv = document.querySelector(divClass);
+    const imageElements = representDiv.querySelectorAll("img");
+    let currentImageIndex = 0;
+
+ 
+    function changeImage() {
+     
+        imageElements[currentImageIndex].style.opacity = 0;
+
+      
+        currentImageIndex = (currentImageIndex + 1) % imageElements.length;
+        imageElements[currentImageIndex].style.opacity = 1;
+    }
+
+   
+    setInterval(changeImage, 3000);
+}
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    changeImageForDiv(".represent");
+    changeImageForDiv(".represent2");
+    changeImageForDiv(".represent3");
+    changeImageForDiv(".represent4");
+});
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const options = {
+        root: null,  
+        rootMargin: "0px", 
+        threshold: 1
+    };
+
+   
+    const targets = document.querySelectorAll('.futuretype1, .futuretype2');
+    
+    const callback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+         }
+    });
+    };
+    const observer = new IntersectionObserver(callback, options);
+
+   
+    targets.forEach(target => observer.observe(target));
+});
+    
+//-------------티켓사진-------------------------------------
+document.addEventListener("DOMContentLoaded", () => {
+    const boxes = document.querySelectorAll('.box');
+    const observer = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                   
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); 
+                }
+            });
+        },
+        {
+            threshold: 0.1 
+        }
+    );
+    boxes.forEach((box) => observer.observe(box)); 
+});
+
+
+
+
+
+//=======================
+
+document.addEventListener('DOMContentLoaded', () => {
+    const fadeInElements = document.querySelectorAll('.fade-in-on-scroll');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // 한 번만 실행
+            }
+        });
+    }, { threshold: 0.1 }); // 10%만 보여도 트리거
+
+    fadeInElements.forEach(element => observer.observe(element));
+});
+
+
+
+</script>
+</head>
+<body>
+    
+
+<div id="authormainpage">
+    <div class="MAIN1">
+        <div class="main1">
+            <div class="main2">
+                <a href="mainpage2.html" class="typea">HOME</a>
+                <a href="" class="typeb">Digital Media</a>
+                <a href="" class="typec">exhibition</a>
+               
+            </div>
+            <div class="div3"><img src="img/echoartslogoorangemainwihte3.png"></div>
+            <div class="main3">
+                <a href=""><img src="img/digiicon11.png"></a>
+                <a href=""><img src="img/digiicon22.png"> </a>
+                <a href=""><img src="img/digiicon33.png"></a>
+                <a href=""><img src="img/digiicon44.png"></a>
+            </div>
+        </div>
+    </div>
+</div>  
+  
+
+
+          
+
+
+    <!--writerspage end-->
+    
+
+
+   
+   <!-- <div class="homepagehero--video">뮤지엄에서의 영상 퍼옴.
+        <video id="hero-video" loop="" muted="" autoplay="" playsinline="" webkit-playsinline="" poster="https://www.warhol.org/wp-content/uploads/2024/05/2024_WARHOL_MONTAGE_POSTER-75-percent-640x360.jpg">
+        <source src="https://www.warhol.org/wp-content/uploads/2024/05/2024_WARHOL_MONTAGE-720-30.mp4" type="video/mp4">
+            
+        </video>
+        <div class="hero-video_controls_container">
+            <button id="hero-video_controls" aria-label="Pause Video" aria-pressed="false" style="display: block;">
+                <span class="screen-reader-text">Pause and Play background video</span>
+                <svg class="icon--pause" aria-hidden="true" xmlns="" height="48px" viewBox="0 -960 960 960" width="48px" fill="#ffffff"><path d="M359-314h71v-332h-71v332Zm171 0h71v-332h-71v332ZM480.14-55Q392-55 314.51-88.08q-77.48-33.09-135.41-91.02-57.93-57.93-91.02-135.27Q55-391.72 55-479.86 55-569 88.08-646.49q33.09-77.48 90.86-134.97 57.77-57.48 135.19-91.01Q391.56-906 479.78-906q89.22 0 166.83 33.45 77.6 33.46 135.01 90.81t90.89 134.87Q906-569.34 906-480q0 88.28-33.53 165.75t-91.01 135.28q-57.49 57.8-134.83 90.89Q569.28-55 480.14-55Z"></path></svg>
+                <svg class="icon--play" aria-hidden="true" xmlns="" height="48px" viewBox="0 -960 960 960" width="48px" fill="#ffffff"><path d="m377-300 284-180-284-181v361ZM480.14-55Q392-55 314.51-88.08q-77.48-33.09-135.41-91.02-57.93-57.93-91.02-135.27Q55-391.72 55-479.86 55-569 88.08-646.49q33.09-77.48 90.86-134.97 57.77-57.48 135.19-91.01Q391.56-906 479.78-906q89.22 0 166.83 33.45 77.6 33.46 135.01 90.81t90.89 134.87Q906-569.34 906-480q0 88.28-33.53 165.75t-91.01 135.28q-57.49 57.8-134.83 90.89Q569.28-55 480.14-55Z"></path></svg>
+            </button>
+        </div>
+    </div>-->
+
+
+    
+    <!--뮤지엄영상end-->
+
+
+
+    <div id="writerimage"> <!--2.------------------------->   
+        <!--왼쪽에서 나오는 네비입니다-->
+        <div class="titlemain">WITER</div>
+        
+            <div class="writerimg">    
+                <div class="inner">
+                    <div id="snb">
+                        <div class="menu-big-title"></div>
+                        <ul class="menu-list">
+                        <li><a href="#" class="dep-01">ANDY WARHOL</a></li>
+                        <li><a href="#" class="dep-01 dep-02">PHOTO</a></li>
+                        <li><a href="#" class="dep-01 dep-02">EXHIBITION</a></li>
+                        <li><a href="#" class="dep-01 dep-02">REPRESENTATIVE</a></li>
+                        <li><a href="#" class="dep-01 dep-02">EXHIBITIONHALL</a></li>
+                        <li><a href="#" class="dep-01 dep-02">REVIEW</a></li>
+                        <li><a href="#" class="dep-01 dep-02">WRITERSSTORY</a></li>
+                        <li><a href="#" class="dep-01 dep-02">GOALSFUTURE</a></li>
+            
+                        </ul>
+                    </div>
+
+                </div> 
+              
+                <div class="container">
+                        <div class="containertext">
+                           <p class="videotitle1">ANDY WARHOL</p>
+                            <p class="videotitle2">ARTIST PAGE</p>
+                            <div class="h2-underline">  </div>
+                        </div>
+                        <div id="andyphoto">
+                            <div class="andyphoto2">
+                                <div class="warholphoto"><img src="img4/andyandy1.png" alt="AndyWarholPhoto1"></div>
+                                <div class="warholphoto"><img src="img4/andyandy2.png" alt="AndyWarholPhoto2"></div>
+                            </div>
+                            <div class="andyphoto3">   
+                                <div class="warholphoto"><img src="img4/andyandy4.png" alt="AndyWarholPhoto3"></div>
+                                <div class="warholphoto"><img src="img4/andyandy3.png" alt="AndyWarholPhoto4"></div>
+                            </div>    
+                        </div>
+                    <div class="sero1">
+                      <!--  <div class="andysero">
+                            <div class="sero2">    
+                                <h1 class="sero sero4">ANDY WARHOL</h1>
+                            </div>
+                            <div class="sero5">
+                                <h1 class="sero sero3">ARTIST PAGE</h1>
+                            </div>
+                        </div>
+                       <div id="andyphoto">
+                                <div class="warholphoto"><img src="img4/andy99999.png" alt="AndyWarholPhoto3" style="width:28.5vw;"></div>
+                            
+                        </div>--> 
+                    </div>
+
+                        <!--<div class="andyvideo">
+                            <video  src="img4/Andyvideo.mp4" class="andyvideo2" controls>대체텍스트</video>
+                         </div>--> 
+                       
+                        <div class="review">
+                            <a href="" class="reviewtype1">"처음엔 이게 진짜 예술인지 믿기 어려웠어요. 하지만 곧 깨달았죠. 워홀은 우리 일상에 예술을 가져온 거예요."  <span class="reviewspan">(1962년, 페러스 갤러리, LA)</span></a>
+                            
+                            <a href="" class="reviewtype1">""마릴린 먼로의 얼굴이 이렇게 반복되는 게 왜 이렇게 강렬한 느낌을 주는지 모르겠어요. 계속 보고 싶어져요." <span class="reviewspan">(1964년, 스테이블스 갤러리, 뉴욕)</span></a>
+                            
+                            <a href="" class="reviewtype1 mobilenone">그의 작품은 마치 거울 같아요. 내가 사는 세상을 반영하는 느낌이에요"  <span class="reviewspan">(1965년, 인스티튜트 오브 컨템포러리 아트, 필라델피아)</span></a>
+                            
+                            <a href="" class="reviewtype1 mobilenone" >워홀의 작품을 직접 보는 건 정말 특별했어요. 그의 강연은 이해하기 어렵지만 매력적이었죠."  <span class="reviewspan">(1975년, 옥스포드 대학교)</span></a>
+                            
+                        </div>
+
+
+                       
+
+
+
+                </div>
+            </div>
+    </div>   
+    
+
+    <div class="inner2">
+        <div class="image-container">
+            <div class="maril1" >
+                <img id="image1" class="image1 moving" src="img4/marilynmonroe1111.jpg" alt="Image 1" >
+            </div>    
+            <div>    
+                <img id="image2" class="image1 moving" src="img4/marilynmonroe2.jpg" alt="Image 2" >
+            </div>
+            <div>    
+                <img id="image3" class="image1 moving" src="img4/marilynmonroe111.jpg" alt="Image 3" >
+            </div>
+            <div>    
+                <img id="image4" class="image1 moving" src="img4/marilynmonroe1111.jpg" alt="Image 4" >
+            </div>
+            <div>    
+                <img id="image5" class="image1 moving" src="img4/marilynmonroe111111.jpg" alt="Image 5" >
+            </div>    
+            <div>    
+                <img id="image6" class="image1 moving" src="img4/marilynmonroe1111111.jpg" alt="Image 6" >
+            </div>
+            <div>    
+                <img id="image7" class="image1 moving" src="img4/marilynmonroe22.jpg" alt="Image 7" >
+            </div>
+            <div>    
+                <img id="image8" class="image1 moving" src="img4/marilynmonroe222.jpg" alt="Image 8" >
+            </div>               
+        </div>
+    </div>
+
+
+
+
+
+    
+    <div class="andyh51">
+        <p class="andyh5type1">워홀의 예술, 그리고 당신의 이야기</p>
+         
+         <p class="andyh5type2">"Warhol's Art, and Your Story"</p>
+ 
+     </div>
+ 
+
+
+
+     <div class="containers5">
+        <div class="box2 box"><img src="img4/ticket11111.jpg.png" ></div>
+        <div class="box3 box"><img src="img4/ticket1.jpg" ></div>
+        <div class="box4 box"><img src="img4/ticket33.png" ></div>
+        <div class="box5 box"><img src="img4/ticket66.jpg.png" ></div>
+        <div class="box6 box"><img src="img4/ticket77.jpg.png" ></div>
+        <div class="box7 box"><img src="img4/ticket55.png" ></div>
+        <div class="box8 box"><img src="img4/ticket11.jpg" ></div>
+        <div class="box9 box"><img src="img4/ticket4.jpg" ></div>
+    </div>
+    
+
+    <div class="review">
+        <a href="" class="reviewtype1  reviewtype2">"워홀의 작품은 단순히 '그림'이 아니라, 우리 사회와 문화를 반영하는 거울 같았어요. 그의 예술은 정말로 혁명적입니다."<br>"캠벨 수프 캔 작품을 실제로 보니, 단순한 이미지 같으면서도 시대의 변화를 담고 있다는 점에서 감동적이었어요. 그의 작품은 여전히 현대적입니다."
+          <br><span class="reviewspan ">  (제시 리 (Jessie Lee), 그래픽 디자이너 2025년 1월 15일)</span>
+        <a href="" class="reviewtype1 reviewtype2">"워홀의 마릴린 먼로 시리즈를 보며, 대중문화를 예술로 승화시킨 그의 혁신적 접근에 놀랐어요. 지금 봐도 참신합니다."
+           <br> <span class=reviewspan>( 사라 킴 (Sarah Kim), 예술학 교수 2025년 1월 12일 ) </span>
+        <a href="" class="reviewtype1 reviewtype1  mobilenone">"제가 워홀의 브릴로 박스를 보며 느낀 건, 우리가 소비하는 모든 것이 예술이 될 수 있다는 그의 철학이었어요. 작품을 보며 생각이 깊어졌습니다."
+            <br> <span class=reviewspan>( 리처드 박 (Richard Park), 마케팅 전문가 2025년 1월 10일 )</span></a>
+        <a href="" class="reviewtype1 reviewtype2  mobilenone">"앤디 워홀의 자화상을 보며, 그는 단순히 화가가 아니라 자기 자신을 예술로 표현한 사람이라는 걸 느꼈어요. 대단한 예술가입니다."
+            <br> <span class="reviewspan  mobilenone" >( 클레어 송 (Claire Song), 미술 전공 학생 2025년 1월 8일 )</span></a>
+        <a href="" class="reviewtype1 reviewtype2  mobilenone" >"그의 '화려함 속의 공허함'을 탐구한 작품들을 보며, 현대 사회의 소비문화를 되돌아볼 수 있었어요. 정말 강렬했어요."
+            <br> <span class="reviewspan">( 제임스 최 (James Choi), 콘텐츠 크리에이터 2025년 1월 5일 ) </span></a>
+       
+    </div>
+
+
+
+    <div id="visitors">    <!--4. 작품전시를 보고 있는 관객들 모습이나 전시장 사진 현장 사진--------------------->   
+        <div class="visitors1">
+          <div class="visi1">
+            <div class="visitors2 tors">
+                <img src="img4/size6.png">
+            </div>
+            <div class="visitors3 tors">
+                <img src="img4/visitors333.jpg">
+            </div>
+            <div class="visitors4 tors">
+                <img src="img4/size2.png">
+            </div>
+            <div class="visitors5 tors">
+                <img src="img4/size8.png">
+            </div>
+        </div>
+        <div class="visi1">
+            <div class="visitors5 tors" >
+                <img src="img4/size99.png">
+            </div>
+            <div class="visitors6 tors">
+                <img src="img4/size11.png">
+            </div>
+            <div class="visitors7 tors">
+                <img src="img4/size4.png">
+            </div>
+            <div class="visitors5 tors">
+                <img src="img4/size9.png">
+            </div>
+        </div>    
+        </div>
+    </div><!--visitors end-->
+
+
+    <div id="gallery-slider">
+        <div class="slider-container">
+          <div class="slider-track">
+            <div class="slide-item"><img src="img4/size6.png" alt="Slide 1"></div>
+            <div class="slide-item"><img src="img4/visitors333.jpg" alt="Slide 2"></div>
+            <div class="slide-item"><img src="img4/size2.png" alt="Slide 3"></div>
+            <div class="slide-item"><img src="img4/size8.png" alt="Slide 4"></div>
+            <div class="slide-item"><img src="img4/size99.png" alt="Slide 5"></div>
+            <div class="slide-item"><img src="img4/size11.png" alt="Slide 6"></div>
+            <div class="slide-item"><img src="img4/size4.png" alt="Slide 7"></div>
+            <div class="slide-item"><img src="img4/size9.png" alt="Slide 8"></div>
+          </div>
+        </div>
+      </div>
+      
+
+
+    <!--<div id="andyphoto">
+        <div class="andyphoto2">
+            <div class="warholphoto"><img src="img4/andy4.jpg" alt="AndyWarholPhoto1" style="width:20vw;"></div>
+            <div class="warholphoto"><img src="img4/andy44.jpg" alt="AndyWarholPhoto2" style="width:20vw;"></div>
+        </div>
+        <div class="andyphoto3">   
+            <div class="warholphoto"><img src="img4/andy444.jpg" alt="AndyWarholPhoto3" style="width:20vw;"></div>
+            <div class="warholphoto"><img src="img4/andy4444.jpg" alt="AndyWarholPhoto4" style="width:20vw;"></div>
+        </div>    
+    </div>-->
+  
+
+    <div class="andyh52">
+       <p class="andyh5type1">팝 아트의 혁명가: 앤디 워홀의 이야기</p>
+        
+        <p class="andyh5type2">"Revolutionary of Pop Art: The Story of Andy Warhol</p>
+
+    </div>
+
+
+    <div id="andywarholmain">
+        <div class="andywar1">
+           
+                <div class="andy9898_1">
+                    <div class="andywarimage1"><img src="img4/andy9898.png"></div>
+                    <div class="andywarimage1"><img src="img4/andy9898.png"></div>
+                </div>
+               
+        </div>
+
+        
+    <div class="mobilenadywar">
+        <p class="mobilenadywar1">Pioneer of Pop Art</p>
+        <p class="mobilenadywar1">The Factory: A Hub of Creativityt</p>
+        <p class="mobilenadywar1">Artistic Vision and Legacy</p>
+    </div> 
+
+
+      <div class="andywar2">
+           
+           <div class="andywarimage2"><img src="img4/andyw1.jpg"></div>
+           <div class="andywartype1">
+               
+               <p>
+                <span class="andywarholtitle">Pioneer of Pop Art</span><br><br><br>
+                앤디 워홀은 팝 아트라는 새로운 장르를 통해 <br>예술의 대중화를 이끈 혁명가였습니다. <br>
+                그는 소비 문화와 대중 매체에서 영감을 받아, 코카콜라 병, 캔벨 수프 캔, <br>마릴린 먼로 등
+                 일상적이면서도 상징적인 이미지를 작품에 담았습니다. <br>
+                 이를 통해 워홀은 예술이 반드시 고급스럽고 <br>추상적일 필요가 없다는 점을 증명했습니다. <br>
+                 그의 대표적인 실크스크린 기법은 대량 생산의 개념을 예술로 끌어들여<br> 
+                 창작의 독창성에 대한 고정 관념에 도전했습니다.<br> 그의 작품은 단순히 시각적 즐거움에 그치지 않고
+                 ,<br> 소비 사회와 대중 문화에 대한 깊은 통찰을 제공합니다.<br> 워홀은 예술이 특정 계층만의 전유물이 아닌,
+                  <br>모두가 공감하고 즐길 수 있는 것이어야 한다고 믿었습니다. <br>
+                  그의 이러한 혁신은 예술의 정의를 새롭게 쓰는 계기가 되었습니다.
+              </p>
+           </div>
+            </div>
+            <div class="andywar33">
+                    <div class="andywartype22">
+                            
+                        <p>
+                            <span class="andywarholtitle">The Factory: A Hub of Creativity</span><br><br><br>
+                             워홀의 스튜디오인 팩토리는 단순한 작업 공간이 아닌,<br> 창작과 협업의 중심지였습니다. 
+                            <br>이곳은 예술가, 음악가, 배우 등 다양한 창작자들이 자유롭게 아이디어를 <br>
+                            교류하며 새로운 실험을 시도했던 곳이었습니다.<br> 팩토리는 워홀의 작품 세계를 확장하는 데 중요한 역할을 했으며,<br>
+                             예술과 대중문화의 경계를 허무는 공간으로 자리 잡았습니다.<br> 
+                             워홀은 팩토리에서 실크스크린 작업뿐만 아니라 영화 제작,<br> 패션 협업 등
+                              다양한 활동을 펼쳤습니다.<br> 팩토리는 창작뿐 아니라 뉴욕의 문화와 사교의 중심으로도 기능하며,
+                              <br> 당시의 시대적 흐름을 반영하는 장소로 기록되고 있습니다.<br> 
+                              이곳에서 탄생한 그의 작품들은 현대 예술의 패러다임을 바꾸었고,<br> 워홀의 창의성과 실험 정신을 상징합니다.
+                    </p>
+                </div>
+                <div class="andywarimage33"><img src="img4/andy23.jpg"></div>
+                
+            </div>
+            <div class="andywar4">
+               
+
+
+
+                <div class="andywarimage4 fade-in-on-scroll">
+                    <div><img src="img4/andy222.jpg" alt="Andy Image"></div>
+                    <div class="andywartype33">
+                        <span class="andywarholtitle">Artistic Vision and Legacy</span><br><br>
+                        <p>워홀은 예술과 상업성의 경계를 허물며, 예술의 대중화와 현대화를 이끌었습니다.
+                        그는 <br>"미래에는 누구나 15분 동안 유명해질 것이다"라는<br> 말로 디지털 시대의
+                         대중 매체와 유명세 문화를 예견했습니다.<br> 그의 작업은 현대 소비주의와 매스미디어의 역할을 조명하며
+                          <br>예술이 현대 사회와 어떻게 상호작용하는지를 보여줍니다.<br> 
+                          오늘날에도 워홀의 유산은 다양한 분야에서 계속 이어지고 있습니다.
+                           많은 현대 예술가들은 워홀의 아이디어와 철학에서 영감을 받고 있으며
+                           그의 작품은 전 세계 갤러리와 박물관에서 사랑받고 있습니다. 
+                           워홀은 단순히 팝 아트의 선구자에 그치지 않고<br> 
+                           예술이 일상과 공존하며 더 넓은 세상을 비추는 도구임을 보여준 <br>예술적 비전가로 남아 있습니다.
+                    
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+     
+    </div>
+</div>
+
+
+
+  <!--  <div class="andywartype1">
+        <p>
+           
+            앤디 워홀(Andy Warhol, 1928–1987)은 <br>20세기 미국의 가장 중요한 미술가이자 팝 아트 운동의 선도적 인물입니다. <br>
+            그는 대중 문화, 광고, 소비사회, 그리고 유명 인물들을 예술 작품의 주제로 끌어들였으며, <br>
+            전통적인 회화의 경계를 허물고 예술을 대중화하는 데 중요한 역할을 했습니다. <br>
+            워홀은 상업적인 접근 방식과 독창적인 기법으로 예술계를 혁신적으로 변화시켰습니다. <br>
+            유명한 "캠벨 수프 캔"이나 "마릴린 먼로" 시리즈처럼 반복적인 이미지를 사용하며, 예술이 더 이상 <br>
+            단지 고급스럽고 개인적인 것이 아니라 대중적인, 상업적인 것으로 변모해야 한다고 주장했습니다.<br>
+
+
+            앤디 워홀은 많은 영감을 대중문화와 광고에서 얻었습니다.<br>
+             특히 영화, 텔레비전, 음악, 광고, 잡지 등에서 그가 작품의 아이디어를 얻었으며, <br>
+                현대 소비 사회에 대한 깊은 관심을 가지고 있었습니다. 그의 예술적 접근법은 다음과 같습니다<br>
+
+           워홀은 캔벨 수프 캔, 코카콜라 병, 마릴린 먼로, 엘비스 프레슬리와 같은 대중적인 아이콘을 주제로 삼았습니다.
+            <br>상업적인 기법과 대량 생산을 예술에 적용하며, <br>"예술도 하나의 상품처럼 판매될 수 있다"는 메시지를 전달했습니다.
+           <br>>실크스크린 기법을 사용하여 같은 이미지를 반복적으로 출력하는 방식으로, <br>
+            소비사회에서 반복적인 소비의 의미를 예술로 풀어냈습니다.
+            <br>>워홀은 마릴린 먼로, 엘비스 프레슬리, 마이클 잭슨, 프린스 등 유명 인물들을 주제로 한 <Br>
+                작품을 통해 그들의 이미지가 어떻게 대중화되고 상품화되는지를 탐구했습니다.
+
+
+        </p>
+
+    </div>-->
+
+
+
+    <div class="andywar5">
+        <div class="andywartype1">
+            <img src="img4/andywar1.webp">
+            <img src="img4/warhol44.jpg">
+            <img src="img4/warhol5.jpg">
+            <img src="img4/warhol4.jpg">
+            <img src="img4/warhol2.jpg">
+        </div>
+        <div class="andywartype1">  
+            <img src="img4/andywarhol33.jpg">
+            <img src="img4/andywar3.webp">
+            <img src="img4/warhol66.jpg">
+            <img src="img4/warhol1.jpg">
+            <img src="img4/andywarhol1.jpg">
+        </div>  
+    </div>    
+    <!--    <div class="andywartype1">  
+            <img src="img4/andy432.webp">
+            <img src="img4/j1.webp">
+            <img src="img4/andywarhol22.jpg">
+            <img src="img4/warhol22.jpg">
+            <img src="img4/warhol3.jpg">
+        </div>    
+        <div class="andywartype1">     
+            <img src="img4/andypaint1.png">
+            <img src="img4/warhol33.jpg">
+            <img src="img4/warhol6.jpg">
+            <img src="img4/warhol11.jpg">
+            <img src="img4/warhol55.jpg">
+        </div>
+    </div>    
+    <div id="andytype">
+           
+    </div>-->
+    <!--마릴린먼로 이미지 -----------------------------------------------------    -->  
+
+  
+    
+
+       
+   <!--writerimage end------------------------------------------------------------------>
+
+           
+    
+   
+   
+<div class="andyh53">
+       <p class="andyh5type1">작품소개</p>
+       <p class="andyh5type2">Introduction of the work </p>
+</div>
+
+<div id="representative"> 
+    <div class="represent">
+        <div>
+            <img src="img4/campbells soup1962.jpg" class="image image_b" >
+        </div> 
+        <div>   
+            <img src="img4/silvercarcrash1963.jpg" class="image image_b1" >
+        
+        </div> 
+        <div>  
+            <img src="img4/sixtylastsuppers1986.jpg " class="image image_b2 " >
+        
+        </div>
+        <div>   
+            <img src="img4/tripleelvis1963.jpg" class="image image_b3" >
+        
+        </div>
+    </div>     
+    
+    <div class="represent2">
+        <img src="img4/cat11.jpg" class="image image_a" >
+      
+        <img src="img4/flowers1.png" class="image image_a1" >
+     
+        <img src="img4/bluemarilyu1964.jpg" class="image image_a2" >
+      
+        <img src="img4/greencarcrash1963.jpg" class="image image_a3" >
+       
+        <img src="img4/receriot1964.jpg" class="image image_a4" >
+      
+    </div>
+    
+    <div class="represent3">
+        <img src="img4/skulls1976.jpg" class="image image_c" >
+      
+        <img src="img4/monalisa1963.webp" class="image image_c1" >
+       
+        <img src="img4/andy4444.jpg" class="image image_c2" >
+      
+        <img src="img4/painting444.jpg" class="image image_c3" >
+     
+        <img src="img4/painting55.jpg" class="image image_c4" >
+        <img src="img4/cow.jpg" class="image image_c4" >
+        <img src="img4/andysho.jpg" class="image image_c4" >
+    </div>
+
+    <div class="represent4">
+        <img src="img4/painting1441.jpg" class="image image_d">
+       
+        <img src="img4/andypaint2.jpg" class="image  image_d1">
+      
+        <img src="img4/coca1.jpeg" class="image  image_d2">
+       
+        <img src="img4/painting11.jpg" class="image  image_d3">
+    </div>
+
+    
+    
+</div>
+        </div>
+
+      <!--     <h4>고양이시리즈</h4> 
+        <div class="representative2">
+
+           
+          <div class="representative2 represent">
+
+            </div>
+            <div class="representative3 represent">
+
+            </div>
+           <div class="representative4 represent">
+
+            </div>
+            <div class="representative5 represent">
+
+            </div>
+
+        </div>
+-->
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+    
+    <div class="andyh54">
+        <p class="andyh5type1">콜라보레이션.협업</p>
+        <p class="andyh5type2">Collaboration</p>
+    </div>
+
+    
+     <div id="andycollaboration">
+    <!-- 라디오 버튼 -->
+    
+        <input type="radio" id="collabo1" name="collaboration" checked>
+        <input type="radio" id="collabo2" name="collaboration">
+        <input type="radio" id="collabo3" name="collaboration">
+      <!--  <input type="radio" id="collabo4" name="collaboration">
+        <input type="radio" id="collabo5" name="collaboration">-->
+
+        <!-- 세 개의 박스 -->
+        <div class="collaboration_a">
+            <div class="andycollaboration1">
+            
+                    <div class="andycollabo1 an_dy1 an_dy"><img src="img4/bmw.jpg"></div>
+                    <div class="andycollabo2 an_dy2 an_dy"><img src="img4/basquiat.jpg"></div>
+                   
+            </div>
+            <div class="andycollaboration2">
+                <div class="andycollabo3 an_dy3 an_dy"><img src="img4/uni1.webp"></div>
+                <div class="andycollabo4 an_dy4 an_dy"><img src="img4/sk2.jpg"></div>
+            </div>
+        </div>
+
+        
+        
+        <div class="collaboration_b">
+            <div class="andycollaboration3">
+                <div class="andycollabo1 an_dy5 an_dy"> <img src="img4/incase.jpg"></div>
+                <div class="andycollabo2 an_dy6 an_dy"><img src="img4/shoes.jpg"></div>
+            </div>
+            <div class="andycollaboration4">
+                <div class="andycollabo3 an_dy7 an_dy"> <img src="img4/innis.jpg"></div>
+                <div class="andycollabo4 an_dy8 an_dy"><img src="img4/fashion.png"></div>
+            </div>
+        </div>
+
+        <div class="collaboration_c">
+            <div class="andycollaboration5">
+                <div class="andycollabo1 an_dy9 an_dy"><img src="img4/coca.jpg"></div>
+                <div class="andycollabo2 an_dy0 an_dy"><img src="img4/ti.png"></div>
+            </div>
+            <div class="andycollaboration1">
+                <div class="andycollabo3 an_dy11 an_dy"><img src="img4/swa.jpeg"></div>
+                <div class="andycollabo4 an_dy22 an_dy"><img src="img4/soup1.JPG"></div>
+            </div>
+        </div>
+  
+     
+      
+      
+        <!-- 버튼들 -->
+    
+    </div>
+
+
+
+      
+        
+
+    
+    
+
+   
+
+    
+ 
+    
+    <div class="andyh55">
+        <p class="andyh5type1">작가의 작가 앤디워홀</p>
+        <p class="andyh5type2">Andy Warhol, author of the writer </p>
+    </div>
+
+        
+
+
+      <!--8. 작가들의 이야기----------------------------------------------------------->   
+
+    <div class="wirterwirter">
+        <div class="wirter_wirter1">
+            <div>
+            <img src="img4/robert1.jpg" alt="writer1" >
+            </div>
+            <div class="wirter stoty1">
+               <p class="writertype1">로버트 인디애나<span class=stoty_5> (Robert Indiana)</span></p>
+               <p class="writertype2">"앤디 워홀은 대중적인 것의 가치를 예술로 전환함으로써 우리 모두가 새로운 방식으로 세상을 바라보게 만들었다."</p>
+            </div>
+        </div>
+        
+        <div class="wirter_wirter2">
+            <div>
+               <img src="img4/jons.webp" alt="writer2" >
+            </div>
+            <div class="wirter stoty2">
+                <p class="writertype1">재스퍼 존스<span class=stoty_5> (Jasper Johns)</span></p>
+                <p class="writertype2">"워홀의 작업은 단순한 이미지를 넘어선 메시지를 전달하며, 현대 예술의 새로운 가능성을 열었다."</p>
+            </div>
+        </div>
+        
+        <div class="wirter_wirter3">
+            <div>
+                <img src="img4/Jeff Koons.jpg" alt="writer3" >
+            </div>
+            <div class="wirter stoty3">
+                <p class="writertype1">제프 쿤스 <span class=stoty_5>(Jeff Koons)</span></p>
+                <p class="writertype2">"워홀은 대중문화의 이미지를 예술로 변화시키며 상업성과 예술의 경계를 허물었고, 그 작업은 오늘날에도 여전히 중요한 영향을 미친다."</p>
+            </div>
+        </div>
+        
+        <div class="wirter_wirter4">
+            <div>
+                <img src="img4/jo.jpg" alt="writer4" >
+            </div>
+            <div class="wirter stoty4">
+                <p class="writertype1">로이 리히텐슈타인<span class=stoty_5> (Roy Lichtenstein)</span></p>
+                <p class="writertype2">"워홀은 소비사회의 이미지를 통해 현대인의 삶을 시각적으로 정의했다. 그의 접근은 예술의 새로운 형태를 창조한 것이다."</p>
+            </div>
+        </div>
+        
+        <div class="wirter_wirter5">
+            <div>
+                <img src="img4/Robert.jpg" alt="writer5" >
+            </div>
+            <div class="wirter stoty5">
+                <p class="writertype1">
+                    로버트 러우센버그 <span class=stoty_5>(Robert Rauschenberg)</span></p>
+                <p class="writertype2">
+                    "워홀은 미술을 매우 상업적이고 기계적인 방식으로 만들었지만, 그 자체로 중요한 혁신을 이뤄냈다."
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="andyh56">
+        <p class="andyh5type1">"I am a machine."</p>
+        <p class="andyh5type2">ANDY WARHOL</p>
+    </div>
+
+    <div calss="future1">
+    
+        <div>
+            <div>    
+                <p class="futuretype1">"In the future, everyone will be world-famous for 15 minutes."</p>
+                <p class="futuretype2">미래에는 누구나 15분 동안 유명해질 기회를 가질 것이다.</p>
+            </div>
+            <div>    
+                <p class="futuretype1"> "Art is what you can get away with."</p>
+                <p class="futuretype2">예술은 사람들이 받아들일 수 있거나 논란을 일으킬 수 있는 모든 것이다.</p>
+            </div>
+            <div>    
+                <p class="futuretype1"> "Being good in business is the most fascinating kind of art."</p>
+                <p class="futuretype2">비즈니스에 능숙한 것도 가장 매력적인 예술의 한 형태다. </p>
+            </div>
+            <div>    
+                <p class="futuretype1"> "Don't think about making art, just get it done."</p>
+                <p class="futuretype2">예술 창작에 너무 많은 고민을 하지 말고 단순히 행동으로 옮겨라. </p>
+            </div>
+            <div>    
+                <p class="futuretype1">"I think everybody should like everybody."</p>
+                <p class="futuretype2">세상 모든 사람들이 서로를 좋아해야 한다. </p>
+            </div>
+            <div>    
+                <p class="futuretype1"> "I am a deeply superficial person."</p>
+                <p class="futuretype2">나는 표면적으로는 피상적이지만 그 속에 깊이가 있다</p>
+            </div>
+            <div>    
+                <p class="futuretype1">"I never read, I just look at pictures."</p>
+                <p class="futuretype2">나는 책을 읽지 않고 그림만 본다. </p>
+            </div>
+            <div>   
+                <p class="futuretype1">"The idea of waiting for something makes it more exciting."</p>
+                <p class="futuretype2">무언가를 기다리는 과정이 더 흥미롭게 만든다.</p>
+            </div>
+            <div>    
+                <p class="futuretype1"> "Everybody must have a fantasy."</p>
+                <p class="futuretype2">모든 사람은 환상을 가져야 한다.</p>
+            </div>
+            <div>    
+                <p class="futuretype1"> "I like boring things."</p>
+                <p class="futuretype2">나는 지루한 것을 좋아한다.</p>
+            </div>
+
+        </div>
+     <!--   <div class="lastandy">  
+            <img src="img4/warhol7.jpg">
+        </div>  -->
+        <div class="warsign hidden">
+            <img src="img4/warholsign.gif" alt="Warhol Sign">
+          </div>
+    </div>
+    
+      
+
+   
+ 
+
+
+     
+
+
+  
+
+
+  <!-- <div id="andyphoto">
+        <div class="andyphoto2">
+            <div class="warholphoto"><img src="img4/andy4.jpg" alt="AndyWarholPhoto1" style="width:20vw;"></div>
+            <div class="warholphoto"><img src="img4/andy44.jpg" alt="AndyWarholPhoto2" style="width:20vw;"></div>
+        </div>
+        <div class="andyphoto3">   
+            <div class="warholphoto"><img src="img4/andy444.jpg" alt="AndyWarholPhoto3" style="width:20vw;"></div>
+            <div class="warholphoto"><img src="img4/andy4444.jpg" alt="AndyWarholPhoto4" style="width:20vw;"></div>
+        </div>    
+    </div>--> 
+
+
+
+
+
+
+
+
+
+
+
+    
+ 
+<footer1>
+
+    <div class="footerline1"></div>
+    <!--<div class="footer1main">
+        <div class="footercontent1"></div>
+        <div class="footercontent2"></div>
+        <div class="footercontent3"></div>
+    </div>--> 
+
+    <div class="footer-nav2">
+        <div>
+            <a href="#"><button class="button1" onclick="plzwork3()">티켓</button></a>
+        </div>
+        <div>
+            <a href="#"><button class="button2" onclick="plzwork3()">메일링 서비스</button></a>
+        </div>
+        <div>
+            <a href="#"><button class="button2" onclick="plzwork3()">소중한 리뷰를 남겨주세요</button></a>
+        </div>
+    </div>
+
+    <div class="footer-nav3-1">
+        <li><a href="">법적고지</a></li>
+        <li><a href="">개인데이터</a></li>
+        <li><a href="">쿠키</a></li>
+        <li><a href="">접근성</a></li>
+        <li><a href="">크래딧</a></li>
+        <li><a href="">사진 크래딧</a></li>
+    </div>
+
+    <div class="main4 ">
+        <a href=""><img src="img/digiicon11.png"></a>
+        <a href=""><img src="img/digiicon22.png"> </a>
+        <a href=""><img src="img/digiicon33.png"></a>
+        <a href=""><img src="img/digiicon44.png"></a>
+    </div>
+
+    <div class="footerline2"></div>
+
+    <div class="footer-address">
+        <ul class="footerul">   
+            <li class=company-attr>상호  : ECHO ARTS 대표번호 : 7777-0017 , 사업장 주소  : 서울 미추홀구 인주대로 366번길 (주안동, ECHO ARTS)</li>
+            <li class=company-attr>대표자명 : 백유진  Tel 6460- 5271 (평일 화 - 금  am10 : 30 - pm 6 )</li>
+            <li class=company-attr>Copyright ⓒ 2025 ECHO ARTS All right reserved.</li>
+            <li class=company-attr>이용약관 개인정보처리방침</li>
+            <li class=company-attr>법적 고지 개인데이터 쿠키 접근성 크레딧 사진 크레딧</li>
+          
+        </ul> 
+    </div>
+
+
+</footer1>
+
+
+</body>
+<script>
+
+
+
+//================================
+const sliderTrack = document.querySelector("#gallery-slider .slider-track");
+const totalSlides = sliderTrack.children.length; 
+let currentSlideIndex = 0;
+
+
+function moveToNextSlide() {
+  currentSlideIndex = (currentSlideIndex + 1) % totalSlides; 
+  sliderTrack.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+}
+
+
+setInterval(moveToNextSlide, 5000);
+//=========================
+
+document.addEventListener("DOMContentLoaded", () => {
+    const photos = document.querySelectorAll('.warholphoto');
+    const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+            setTimeout(() => {
+                entry.target.classList.add('show'); 
+            }, index * 200); 
+            observer.unobserve(entry.target); 
+            }
+        });
+    });
+    
+    photos.forEach((photo) => observer.observe(photo));
+});
+
+/*앤디워홀*/
+
+document.addEventListener("DOMContentLoaded", () => {
+    const reviews = document.querySelectorAll('.reviewtype1');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add('show');
+                }, index * 300); 
+                observer.unobserve(entry.target); 
+            }
+        });
+    });
+    reviews.forEach((review) => observer.observe(review));
+});
+
+
+
+
+
+
+
+const texts = [
+    "The Andy Warhol Show ,The Exploding Plastic ,The Andy Warhol Exhibit",
+    " Warhol’s Works", "Warhol’s Factory Works",
+    "Andy Warhol: Retrospective", "Andy Warhol: Sculpture",
+    "Andy Warhol: Retrospective", "Warhol and His Factory",
+    "The Andy Warhol Museum of Modern Art", "Exhibition of Portrait",
+    "Retrospective", "and His Works", "A Retrospective",
+    "The Factory Years", "Warhol and His Iconography", "Andy Warhol",
+    "Andy Warhol: Retrospective", "Andy Warhol: Silver",
+    "Warhol: The Factory Years", "The Warhol Collection",
+    "Warhol: Icons", "...."
+];
+
+    let currentIndex = 0; 
+    const loadCount = 1; 
+    function loadMoreTexts() {
+    const container = document.getElementById('andytype');
+    for (let i = 0; i < loadCount; i++) {
+        if (currentIndex >= texts.length) return; 
+        div.textContent = texts[currentIndex];
+        container.appendChild(div);
+        currentIndex++;
+        }
+    }
+
+window.addEventListener('scroll', () => {
+    const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+    if (scrollTop + clientHeight >= scrollHeight - 10) {
+    loadMoreTexts(); 
+    }
+});
+loadMoreTexts();
+
+
+
+
+//=================================--------------
+
+
+
+
+
+
+
+
+
+//=================================----------------
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    // 이미지 요소를 선택
+    const photos = document.querySelectorAll('.warholphoto');
+
+    // Intersection Observer 설정
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                // 애니메이션 딜레이 적용
+                setTimeout(() => {
+                    entry.target.classList.add('show'); // 보일 때 클래스 추가
+                }, index * 200); // 각 이미지마다 200ms씩 지연
+                observer.unobserve(entry.target); // 관찰 중지
+            }
+        });
+    });
+
+    // 각 이미지를 관찰
+    photos.forEach((photo) => observer.observe(photo));
+});
+
+
+
+
+
+//티켓페이지
+
+document.addEventListener("DOMContentLoaded", () => {
+    const boxes = document.querySelectorAll(".containers5 .box");
+
+    boxes.forEach((box, index) => {
+        setTimeout(() => {
+            box.classList.add("visible");
+        }, index * 500); // 500ms 간격으로 순차적으로 나타나도록 설정
+    });
+});
+
+
+
+//
+
+function changeImageForDiv(divClass) {
+    const representDiv = document.querySelector(divClass);
+    const imageElements = representDiv.querySelectorAll("img");
+    let currentImageIndex = 0;
+
+    // 이미지 교체 함수
+    function changeImage() {
+        // 현재 이미지를 숨김
+        imageElements[currentImageIndex].style.opacity = 0;
+
+        // 다음 이미지를 보여줌
+        currentImageIndex = (currentImageIndex + 1) % imageElements.length;
+        imageElements[currentImageIndex].style.opacity = 1;
+    }
+
+    // 첫 번째 이미지는 처음에 보이도록 설정
+    imageElements.forEach((img, index) => {
+        img.style.opacity = index === 0 ? 1 : 0; // 첫 번째 이미지만 보이도록
+    });
+
+    // 일정 간격으로 이미지 교체
+    setInterval(changeImage, 8000); // 3초 간격으로 이미지 교체
+}
+
+// 두 개의 div에 대해 각각 이미지 교체 적용
+changeImageForDiv(".represent");
+changeImageForDiv(".represent2");
+changeImageForDiv(".represent3");
+changeImageForDiv(".represent4");
+
+
+
+
+
+</script>
+
+
+
+</html>

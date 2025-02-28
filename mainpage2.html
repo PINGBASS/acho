@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mainpage2</title>
+    <link rel="stylesheet" href="0y6K1.css">
+    
+  
+    <link rel="stylesheet" href="wirter1.css">
+    
+   
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+    <script src="main.js" defer></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    // 처음 화면에 첫 번째 버튼만 활성화하도록 설정
+    document.getElementById('newsContent1').style.display = 'block'; // 1소식만 보이게
+    document.getElementById('newsContent2').style.display = 'none'; // 2소식은숨김
+    document.getElementById('newsContent3').style.display = 'none'; //3번째소식은숨김
+
+    document.getElementById('newsBtn1').addEventListener('click', function() {
+        document.getElementById('newsContent1').style.display = 'block';
+        document.getElementById('newsContent2').style.display = 'none';
+        document.getElementById('newsContent3').style.display = 'none';
+    });
+
+    document.getElementById('newsBtn2').addEventListener('click', function() {
+        document.getElementById('newsContent2').style.display = 'block';
+        document.getElementById('newsContent1').style.display = 'none';
+        document.getElementById('newsContent3').style.display = 'none';
+    });
+
+    document.getElementById('newsBtn3').addEventListener('click', function() {
+        document.getElementById('newsContent3').style.display = 'block';
+        document.getElementById('newsContent1').style.display = 'none';
+        document.getElementById('newsContent2').style.display = 'none';
+    });
+});
+
+
+
+
+
+
+//========
+
+
+
+
+    </script>
+</head>
+<body>
+<div id="MAIN" >
+        <header id="firstHeader">
+                <!--데스크탑 메인탑 -->   
+            <div id="main-top">
+                        
+                        <h1 title="firstHeaderlogo">
+                            <a href="#"><img src="img/echoartslogoorangemainwihte3.png" class="logoimg" alt="심볼 이미지"></a>
+                        </h1>
+                
+                        <form method="post" name="sform" id="sform">
+                            <input type="search" id="sbox" class="tbox" placeholder="검색어 입력">
+                            <img src="img/onegray20.png" alt="search-icon" class="onegray" id="search-icon">
+                        </form>
+                    
+            </div> 
+                <!--데스크탑 메인탑 -->
+                <!--모바일 메인탑-->
+            <div id="main-top2">
+                            
+                        <h1 title="firstHeaderlogo2">
+                            <a href="#"><img src="img/logologo.png" class="logoimg2" alt="심볼 이미지"></a>
+                        </h1>
+                        
+                        
+                        <div class="mobiletop2">
+                            <div >  
+                                <form method="post" name="sform2" id="sform2">
+                                <input type="search" id="sbox2" class="tbox2" placeholder="검색어 입력">
+                                </form>  
+                            </div>
+                            <div>
+                                <img src="img/oneorange20.png" alt="search-icon" class="onegray" id="search-icon">
+                            </div>
+                            <div>
+                                <a href="#" id="mobiletoggle"><img src="img/login.png"></a>
+                            </div>
+                        </div>
+            </div> 
+                <!--모바일메인탑-->
+            <div class="line5"></div>     
+                    
+            <div id="main-bottom">
+                        <div id="mainnav">
+                            <ul class="navmenu">
+                                <li><a href="#" class="mainnav1">Echo Art</a></li>
+                                <li><a href="#" class="mainnav2">관람정보</a></li>
+                                <li><a href="#" class="mainnav3">전시안내</a></li>
+                                <li><a href="#" class="mainnav4">문화행사</a></li>
+                                <li><a href="#" class="mainnav5">소식</a></li>
+                            </ul>
+                            <a href="#" id="headertoggle"><img src="img/navtogglegray.png" alt="toggle"  ></a>
+                            
+                        </div>
+            </div>
+
+
+            <div id="toggle_nav" style="display: none;">  
+                <div class="NAV_BAR1">
+                            <ul>
+                                <li class="NAV_BAR1-1"><a href="#" >Echo Art</a></li>
+                                <li class="nav-type"><a href="#">Echo Arts소개</a></li>
+                                <li><a href="#">공연장안내</a></li>
+                                <li><a href="#">층별안내</a></li>
+                                <li><a href="#">편의시설</a></li>
+                            </ul>
+                </div>
+                <div class="NAV_BAR2">
+                            <ul>
+                                <li class="NAV_BAR1-1"><a href="#" >관람정보</a></li>
+                                <li class="nav-type"><a href="#">전시</a></li>
+                                <li><a href="#">전시예매</a></li>
+                                <li><a href="#">예매취소</a></li>
+                                <li><a href="#">예정전시</a></li>
+                                <li><a href="#">지난전시</a></li>
+                                <li><a href="wirterfrist.html">작가소개</a></li>
+                            </ul>
+                </div>
+                <div class="NAV_BAR3">
+                            <ul class="NAV_BAR1-1">
+                                <li class="nav-type"><a href="#" >전시안내</a></li>
+                                <li><a href="#">상설전시</a></li>
+                                <li><a href="#">특별전시</a></li>
+                                <li><a href="digitalpage.html">디지털 미디어</a></li>
+                                <li><a href="#">오디오투어</a></li>
+                            </ul>
+                </div>
+                <div class="NAV_BAR4">
+                            <ul>
+                                <li class="nav-type"><a href="#" >문화행사</a></li>
+                                <li><a href="">공지사항</a></li>
+                                <li><a href="">공연리뷰</a></li>
+                                <li><a href="">오시는길</a></li>
+                                <li><a href="">질문과답변</a></li>
+                            </ul>
+                </div>
+                <div class="NAV_BAR5">
+                            <ul>
+                                <li class="nav-type"><a href="#">소식</a></li>
+                                <li><a href="">Ecoho Arts연계프로그램</a></li>
+                                <li><a href="">행사</a></li>
+                                <li><a href="">공연</a></li>
+                                <li><a href="">멤버쉽.이벤트</a></li>
+                            </ul>
+                </div>
+            </div>
+
+            <div id="toggle_nav_mobile">
+            
+                <div class="mobileline"></div>
+                <div><a href="#" class="close-btn"><img src="img/x.png" alt="닫힘버튼"></a></div>
+                <div class="nav_mobile_type1">
+                    
+                    <div>
+                        
+                        <div class="arrow1">
+                            <p class="mobtype1" >로그인</p>
+                            <a href="arrow" alt="화살표" ><img src="img/arrow.png"></a>
+                        </div>    
+                            <p class="mobtype2">회원님 안녕하세요?</p>
+                            <p class="mobtype3"></p>
+                    </div>
+                    <div><img src="img/orangetwo.png"></div>
+                </div>
+                <div class=""></div>
+                <div class="login_mobile">
+                    <ul>
+                        <div class="menuline">
+                            <div class="line11">
+                                <li><a href="#">Echo Art</a></li>
+                                <a href="#"><img src="img/line.png" style="margin-right: 37px;" class="line22"></a>
+                            </div>
+                            <div class="line222">
+                            <a href="" class="linetype">Echo Art소개</a>
+                            <a href="">공연장안내</a>
+                            <a href="">층별안내</a>
+                            <a href="">편의시설</a>
+                            </div>
+                        </div>
+                        <div class="menuline"> 
+                            <div class="line11">
+                                <li><a href="">관람정보</a></li>
+                                <a href="#"><img src="img/line.png" style="margin-right: 37px;" class="line33"></a>
+                            </div>
+                            <div class="line333">
+                            <a href="">전시예매</a>
+                            <a href="">예매취소</a>
+                            <a href="">예정전시</a>
+                            <a href="">지난전시</a>
+                            <a href="wirterfrist.html">작가소개</a>
+                            </div>
+                        </div>
+                        <div class="menuline">
+                            <div class="line11">
+                                <li><a href="">전시안내</a></li>
+                                <a href="#"><img src="img/line.png" style="margin-right: 37px;" class="line44"></a>
+                            </div>
+                            <div class="line444">
+                                <a href="">상설전시</a>
+                                <a href="">특별전시</a>
+                                <a href="digitalpage.html">디지털미디어</a>
+                                <a href="">오디오투어</a>
+                            </div>
+                        </div>
+                        <div class="menuline">
+                            <div class="line11">
+                                <li><a href="">문화행사</a></li>
+                                <a href="#"><img src="img/line.png" style="margin-right: 37px;" class="line55"></a>
+                            </div>
+                            <div class="line555">
+                                <a href="">공지사항</a>
+                                <a href="">공연리뷰</a>
+                                <a href="">오시는길</a>
+                                <a href="">질문과답변</a>
+                            </div>
+                        </div>
+                        <div class="menuline">
+                            <div class="line11">
+                                <li><a href="">소식</a></li>
+                                <a href="#"><img src="img/line.png" style="margin-right: 37px;" class="line66"></a>
+                            </div>   
+                            <div class="line666">
+                                <a href="">Echo Art 연계프로그램</a>
+                                <a href="">행사</a>
+                                <a href="">공연</a>
+                                <a href="">멤버쉽.이벤트</a>
+                            </div>
+                        </div>     
+                    </ul>
+                </div>
+            <!--<div class="MobileIMG"><img src="img/mobile.png"></div>--> 
+            <!--- <div class="mobileimg">
+                    <div class="mobileimg1">
+                        <img src="img/시계.png">
+                        <p>예약</p>
+                    </div>
+                    <div class="mobileimg2">
+                        <img src="img/시계.png">
+                        <p>예약</p>
+
+                    </div>
+                    <div class="mobileimg3"></div>
+                    <div class="mobileimg4"></div>
+                </div>
+            -->
+
+
+            </div>
+
+            <div class="NAV_nav2">
+                <div class="NAVone">
+                    <div class="NAVONE">
+                        <div class="NAVone1">
+                            <ul>
+                                <li ><a href="#" class="type7">Echo Art</a></li>
+                                <li><a href="" class="type1">Echo Arts소개</a></li>
+                                <li><a href=""  class="type1">공연장안내</a></li>
+                                <li><a href=""  class="type1">층별안내</a></li>
+                                <li><a href=""  class="type1">편의시설</a></li>
+                            </ul>
+                        </div>
+                        <div class="NAVone2">    
+                            <img src="img/nav2.png" alt="">
+                        </div> 
+                    </div>
+                </div>
+                        
+                        
+                        
+                <div class="NAVtwo">
+                    <div class="navtwo2">    
+                        <div class="navtwo3">   
+                            <ul>
+                                <li><a href="" class="type7">관람정보</a></li>
+                                <li><a href="" class="type1">전시예매</a></li>
+                                <li><a href="" class="type1">예매취소</a></li>
+                                <li><a href="" class="type1">예정전시</a></li>
+                                <li><a href="" class="type1">지난전시</a></li>
+                                <li><a href="wirterfrist.html" class="type1">작가소개</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <img src="img/nav6.png" alt=""> 
+                        </div>    
+                    </div>        
+                </div>
+                        
+                        
+                        
+                <div class="NAVthree">
+                    <div class="navthree1">  
+                        <div class="navthree2">
+                            <ul>    
+                                <li><a href="#"  class="type7">전시안내</a></li>
+                                <li><a href="" class="type1">상설전시</a></li>
+                                <li><a href="" class="type1">특별전시</a></li>
+                                <li><a href="digitalpage.html" class="type1">디지털 미디어</a></li>
+                                <li><a href="" class="type1">오디오투어</a></li>
+                            </ul> 
+                        </div>
+                        <div class="navthree3">
+                                <img src="img/nav3.png" alt=""> 
+                        </div>        
+                    </div>
+                </div>        
+
+
+                <div class="NAVfor">
+                    <div class="navfor1">
+                        <div class="navfor2">  
+                            <ul>
+                                <li class="D"><a href="#"  class="type7">문화행사</a></li>
+                                <li><a href="" class="type1">공지사항</a></li>
+                                <li><a href="" class="type1">공연리뷰</a></li>
+                                <li><a href="" class="type1">오시는길</a></li>
+                                <li><a href="" class="type1">질문과답변</a></li>
+                                
+                            </ul>
+                        </div>
+                        <div class="navfor3">
+                            <img src="img/nav4.png" alt="">
+                        </div>
+                    </div>
+                </div>        
+
+
+
+                <div class="NAVfive">
+                    <div class="navfive1">
+                        <div class="navfive2">
+                            <ul>
+                                <li ><a href="#" class="type7">소식</a></li>
+                                <li><a href="" class="type1">Ecoho Arts연계프로그램</a></li>
+                                <li><a href="" class="type1">행사</a></li>
+                                <li><a href="" class="type1">공연</a></li>
+                                <li><a href="" class="type1">멤버쉽.이벤트</a></li>
+                                
+                            </ul>   
+                        </div>
+                        <div class="navfive3">
+                            <img src="img/nav5.png" alt="">   
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div id="btn-page-top" style="translate: none; rotate: none; scale: none; 
+                transform: translate(0px, 0px);  opacity: 1; visibility: inherit;">
+                    <a href="#"></a>
+        </div>
+
+
+<!---------------------------------------------------------------------->
+
+
+       
+<!---------------------------------------------------------------------->
+
+
+
+
+
+                        
+        <div class=main-list>
+                <div class="NORMANDIE">
+                                <div class="norman" display:none;>
+                                    <ul  class="Normndy">
+                                        <h2 tittle="인상주의 150주년 기념전">
+                                        <li class="type_6"><a href="">2025. 04. 30~2025. 05. 26</a></li>
+                                        <li class="type_1"><a href="#" >노르망디 인상파 축제</a></li>
+                                        <li class="type_2"><a href="#">Festival Normandie Impressionniste</a></li>
+                                        <li><a href="" class="type_3">유럽 모던 풍경화의 탄생을 조명하는<br>
+                                                        '인상파의 고향, 노르망디'<br>
+                                                        를 만나보세요!</a></li>
+                                        <li><a href="" class="type_9">유럽 모던 풍경화의 탄생을 조명하는<br>
+                                                        '인상파의 고향, 노르망디'<br>
+                                                        를 만나보세요!</a></li>                
+                                        <a class="type_4">ACHO ARTS  SIGNATURE 홀</a>
+                                    </ul>
+                                </div>
+                                    
+                                <div>
+                                    <form method="post" name="sform" id="sform" style=" margin-top: 1.9vw;">
+                                        <input type="button" color="#FE180B;" value="DECIUVRIR" class="searchbox">
+                                    </form>
+                                </div>
+                </div>
+
+                <div class="gallery-container">
+                    <div class="image-container11">
+                        <img src="img/main-page700.png" alt="" class="imgg">
+                    </div>
+                   
+                </div>
+                        
+        </div>
+
+       
+        <div class=" main-INFO"> 
+                <ul class="navbar_1">
+                    <li><a href="#" class="strong1">관람시간</a></li>
+                    <li><a href="#" class="strong3">월, 화, 수, 목, 금  </a></li>
+                    <li><a href="#" class="strong4">09 : 00 ~ 18 : 00</a></li>
+                    <li><a href="#" class="strong3">토, 일 </a></li>
+                    <li><a href="#" class="strong4">09 : 00 ~ 19 : 00</a></li>
+                </ul>
+
+                <ul class="navbar_2">
+                    <li><a href="#" class="strong1">휴무일</a></li>
+                    <li><a href="#" class="strong3">매달 둘째주 일요일</a></li>
+                </ul>
+                
+                <ul class="navbar_3">
+                    <li><a href="#" class="strong2">오시는길</a></li>
+                    <li><a href="#" class="strong2">예약하기</a></li>
+                </ul>
+        </div>    
+                    
+        <div class="homepagehero--video">
+            <video id="hero-video" loop="" muted="" autoplay="" playsinline="" webkit-playsinline="" 
+            
+            ="https://www.warhol.org/wp-content/uploads/2024/05/2024_WARHOL_MONTAGE_POSTER-75-percent-640x360.jpg">
+            <source src="https://www.warhol.org/wp-content/uploads/2024/05/2024_WARHOL_MONTAGE-720-30.mp4" type="video/mp4">
+                
+            </video>
+            <div class="hero-video_controls_container">
+                <button id="hero-video_controls" aria-label="Pause Video" aria-pressed="false" style="display: block;">
+                    <span class="screen-reader-text">Pause and Play background video</span>
+                    <svg class="icon--pause" aria-hidden="true" xmlns="" height="48px" viewBox="0 -960 960 960" width="48px" fill="#ffffff"><path d="M359-314h71v-332h-71v332Zm171 0h71v-332h-71v332ZM480.14-55Q392-55 314.51-88.08q-77.48-33.09-135.41-91.02-57.93-57.93-91.02-135.27Q55-391.72 55-479.86 55-569 88.08-646.49q33.09-77.48 90.86-134.97 57.77-57.48 135.19-91.01Q391.56-906 479.78-906q89.22 0 166.83 33.45 77.6 33.46 135.01 90.81t90.89 134.87Q906-569.34 906-480q0 88.28-33.53 165.75t-91.01 135.28q-57.49 57.8-134.83 90.89Q569.28-55 480.14-55Z"></path></svg>
+                    <svg class="icon--play" aria-hidden="true" xmlns="" height="48px" viewBox="0 -960 960 960" width="48px" fill="#ffffff"><path d="m377-300 284-180-284-181v361ZM480.14-55Q392-55 314.51-88.08q-77.48-33.09-135.41-91.02-57.93-57.93-91.02-135.27Q55-391.72 55-479.86 55-569 88.08-646.49q33.09-77.48 90.86-134.97 57.77-57.48 135.19-91.01Q391.56-906 479.78-906q89.22 0 166.83 33.45 77.6 33.46 135.01 90.81t90.89 134.87Q906-569.34 906-480q0 88.28-33.53 165.75t-91.01 135.28q-57.49 57.8-134.83 90.89Q569.28-55 480.14-55Z"></path></svg>
+                </button>
+            </div>
+        </div>    
+
+        <div class="Poster_1">
+            <h2 class="TITLE">특별전시</h2>
+            <div class="poster_main2">
+                <div class="poster_space1 space_1">
+                    <div class="space_img">
+                        <a href="#"><img src="img/bigeve1.png" alt="" class="LIST1img_1" ></a>
+                    </div>
+                    
+                    <div class="poster_space_type1">
+                        <p class="space_type1">:우주 엘리베이터</p>
+                            <a href="#" class="space_type2">달의 모양이 태양 빛의 반사로 만들어진다면 
+                                또 다른 달은<br> 낮에 저장된 태양 에너지로 만들어진다.
+                                <br>작가는 치밀하게 계산된 기술과 통제불가능한 자연을 엮어 인공의 <br>푸른달을 처음 띄웠다.
+                            </a>
+                            <a class="space_type3">2025. 04. 22 ~ 06. 24</a>
+                            <a class="space_type4"> ACHO ARTS  RED BOX STAGE</a>
+                            <a href=""><img src="img/icon_1.png" class="iconcon3"></a>
+                    </div>
+                </div>
+
+                <div class="poster_space2 space_2">
+                    <div>
+                        <a href="#"><img src="img/bigeve2.png" alt="" class="LIST1img_2" ></a>
+                    </div>
+                    
+                    <div class="poster_space_type2">
+                        <p class="space_type1">반 고흐 미디어아트 : </p>
+                            <a href="#" class="space_type2">달의 모양이 태양 빛의 반사로 만들어진다면 
+                                또 다른 달은 낮에 저장된<br> 태양 에너지로 만들어진다.
+                                작가는 치밀하게 계산된 기술과 통제불가능한 자연을 <br>엮어 인공의 푸른달을 처음 띄웠다.
+                            </a>
+                            <a class="space_type3">2025. 04. 22 ~ 06. 24</a>
+                            <a class="space_type4"> ACHO ARTS black BOX STAGE </a>
+                            <a href="#"><img src="img/icon_1.png" class="iconcon4"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="digital"> 
+            
+            <h2 class="TITLE">디지털미디어</h2>
+            <div class="Digital1">  
+                <div class="digi1">
+                    <ul class="digital-1">  
+                        <img id="image1"src="img/digital4.png" alt="">
+                    </ul>         
+                        
+                    <div class="digital-list1">    
+                        <h2 class="digital-1-left-list1">Colorful Forest</h2>
+                        <span class="digital-1-left-list2">빛과 컬러의 숲</span>
+                        <li class="digital-1-left-list3">아름다운 풍경을 가진 빛과 컬러의 숲!신비로운 동물들과 함께 멋진 추억을 남겨보세요.</li>
+                    </div>
+                </div> 
+
+            <div class="digital-2">  
+                <div class="digi2">
+                        <div class="digital-col1">
+                            <img src="img/digital5.png" alt="">
+                        </div>
+
+                        <div class="digital-col2">    
+                            <h2 class="digital-col2-left1">Volcanic</h2>
+                            <span class="digital-col2-left2">역동의 볼케닉</span>
+                            <li class="digital-col2-left3">미지의 화산 대지,컬러풀한 용암의 신비로운 화산 생태계를 경험하세요! </li>
+                        </div>
+                </div>    
+                <div class="digi3">               
+                        <div class="digital-col3">
+                            <img src="img/digital6.png" alt="">
+                        </div>
+
+                        <div class="digital-Col4">    
+                            <h2 class="digital-col2-right1">Colorful Forest</h2>
+                            <span class="digital-col2-right2">빛과 컬러의 숲</span>
+                            <li class="digital-col2-right3">아름다운 풍경을 배경으로 신비로운 동물들과 추억을 남겨보세요.</li>
+                        </div>
+                </div> 
+               </div>
+            </div> 
+
+      
+        </div> 
+        
+      <!--  <div class="exhibition_main">
+            <h2 class="TITLE">국내 해외 전시</h2>
+            <div class="Title_exhibition">
+                <div class="exhibition_main_1">
+                   <img src="img/exhibition1.png">
+                </div>
+                <div class="exhibition_main_2">
+                    <img src="img/exhibition2.png">
+                </div>
+                <div class="exhibition_main_3">
+                    <img src="img/exhibition3.png">
+                </div>
+            </div>
+        </div>-->
+
+        <div class="avant-garde_1 exhibition exhibition_main">
+            <h2 class="TITLE">국내 해외 전시</h2>
+            <div class="photo-slider">
+                <div class="photo-grid avant">
+                    <div class="avant_1"><img src="img/introduction4.jpg" alt="사진 1"></div>
+                    <div class="avant_2"><img src="img/introduction1.jpg" alt="사진 2"></div>
+                    <div class="avant_3"><img src="img/introduction2.jpg" alt="사진 3"></div>
+                    <div class="avant_4"><img src="img/introduction3.jpg" alt="사진 4"></div>
+                    <div class="avant_5"><img src="img/bong.png" alt="사진 5"></div>
+                </div>
+                <!-- 이전 및 다음 화살표 버튼 -->
+                <button class="prev-btn" style="display: none;"></button>
+                <button class="next-btn" style="display: none;"></button>
+            </div>
+            <div class="dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+        
+        
+
+        <!--국내해외전시 디지털미디어꺼 우선 가지고 와봅시다.-->
+
+        <div class="image-container">
+
+            <div>
+               <h2>디지털미디어전시</h2>
+            </div>
+
+            <div class="imgimg2">
+                <div class="disitalimg1">
+                    <img id="image2" class="image1" src="img/subdigital1.png" alt="Image2">
+                    <div class="imgtitle11" >
+                        <p class="p1">디지털 유토피아 </p>
+                        <p class="p5">(Digital Utopia)</p>
+                        <p class="p4">상상력을 현실로 바꾸는 새로운 세계</p>
+                        <p class="p2">Subtitle: How Digital Magic Transforms Reality</p>
+                       
+                        <p class="p3">Echo 무지개홀</p>
+                    </div>
+                    <div class="imgtitle111" >
+                        <p class="aa1">디지털 유토피아 </p>
+                        <p class="aa2">(Digital Utopia)</p>
+                        <p class="aa3">상상력을 현실로 바꾸는 새로운 세계</p>
+                        <p class="aa4">Subtitle: How Digital Magic<br> Transforms Reality</p>
+                       
+                        <p class="aa5">Echo 무지개홀</p>
+                    </div>
+                </div>
+
+               
+                
+                <div class="disitalimg7">
+                    <img id="image33" class="image1" src="img/media1.gif" alt="Image3" >
+                    <div class="imgtitle22" >
+                        <p class="p1">빛의 조각</p>
+                        <p class="p11">빛의 조각</p>
+                        <p class="p5">(Fragments of Light)</p>
+                        <p class="p4">어둠 속에서 피어나는 찬란한 순간들</p>
+                        <p class="p2">Fragments of Light: Brilliance unveiled</p>
+                       
+                        <p class="p3">Echo 무지개홀</p>
+                    </div>
+                    <div class="imgtitle222" >
+                        <p class="aa1">빛의 조각</p>
+                       
+                        <p class="aa2">(Fragments of Light)</p>
+                        <p class="aa3">어둠 속에서 피어나는 찬란한 순간들</p>
+                        <p class="aa4">Fragments of Light: <br>Brilliance unveiled</p>
+                     
+                        <p class="aa5">Echo 무지개홀</p>
+                    </div>
+                </div>
+
+                <div class="disitalimg3">
+                    <img id="image4" class="image1" src="img/art2.jpg" art="Image4" >
+                    <div class="imgtitle33" >
+                        <p class="p1">꿈꾸는 코드 </p>
+                        <p class="p5">(Dreaming in Code)</p>
+                        <p class="p4">디지털 속에서 펼쳐지는 상상력의 비밀</p>
+                        <p class="p2">Subtitle: The Secret of Imagination<br> Unfolding in the Digital World</p>
+                        <p class="p3">Echo 무지개홀</p>
+                    </div>
+                    <div class="imgtitle333" >
+                      
+                        
+                        <p class="aa3">디지털 속에서 펼쳐지는 상상력의 비밀</p>
+                        <p class="aa4">Subtitle: The Secret of Imagination Unfolding in the Digital World</p>
+                        <p class="aa5">Echo 무지개홀</p>
+                    </div>
+                </div>    
+
+                <div class="disitalimg4">
+                    <img id="image5" class="image1" src="img/subdigital2.png" alt="Image5" >
+                    <div class="imgtitle44" >
+                        <p class="p1">가상 현실 탈출</p>
+                        <p class="p5">(Escape from Virtual Reality)</p>
+                        <p class="p4">디지털 너머의 진짜 세상을 찾다</p>
+                        <p class="p2">
+                            Subtitle: Unveiling the Hidden Powers of Creativity in the Digital World</p>
+                        <p class="p3">Echo 무지개홀</p>
+                    </div>
+                  <!-- <div class="imgtitle444" >
+                        <p class="aa1">가상 현실 탈출</p>
+                        <p class="aa2">(Escape from Virtual Reality)</p>
+                        <p class="aa3">디지털 너머의 진짜 세상을 찾다</p>
+                        <p class="aa4">
+                            Subtitle: Unveiling the Hidden Powers of Creativity in the Digital World</p>
+                        <p class="aa5">Echo 무지개홀</p>
+                    </div>--> 
+                </div>  
+
+                <div class="disitalimg5">
+                    <img id="image6" class="image1" src="img/subdigital3.png" alt="Image6">
+                    <div class="imgtitle55" >
+                        <p class="p1">마그마의 손길</p>
+                        <p class="p5">Magmatic Reach</p>
+                        <p class="p4">디지털 속에서 하늘로 향한 여정</p>
+                        <p class="p2">A fusion of fire and sky, reaching for the heavens</p>
+                        <p class="p3">Echo 무지개홀</p>
+                    </div>
+                    <div class="imgtitle555" >
+                        <p class="aa1">마그마의 손길</p>
+                        <p class="aa2">Magmatic Reach</p>
+                        <p class="aa3">디지털 속에서 하늘로 향한 여정</p>
+                        <p class="aa4">A fusion of fire and sky, <reaching for the heavens</p>
+                        <p class="aa5">Echo 무지개홀</p>
+                    </div>
+                </div>    
+
+                <div class="disitalimg6">
+                    <img id="image7" class="image1" src="img/subdigital4.png" alt="Image7">
+                    <div class="imgtitle66" >
+                        <p class="p1">픽셀 파라다이스 </p>
+                       
+                        <p class="p5">(Pixel Paradise) </p>
+                        <p class="p4">디지털 공간에서 펼쳐지는 꿈같은 여정</p>
+                        <p class="p2">Finding the Real World <br>Beyond the Digital Screen</p>
+                      
+                        <p class="p3">Echo ARTS SIGNATURE 홀</p>
+                    </div>
+                    <div class="imgtitle666" >
+                        <p class="aa1">픽셀 파라다이스 </p>
+                        <p class="aa2">(Pixel Paradise) </p>
+                        <p class="aa3">디지털 공간에서 펼쳐지는 꿈같은 여정</p>
+                        <p class="aa4">Finding the Real World <br>Beyond the Digital Screen</p>
+                        <p class="aa5">Echo ARTS SIGNATURE 홀</p>
+                    </div>
+                </div> 
+            </div>
+            
+            
+    </div>
+
+
+
+
+
+
+      <!--디지털미디어 end-->
+      <div class="introduction">
+        <h2 class="TITLE">작가소개</h2>
+        <div class="intro1">  
+    
+            <div class="introduction_1 intro_5">
+                <div class="introduction_intro_1">
+                    <div class="image-container2">
+                        <a href="#">
+                            <img src="img4/andy6.jpg" alt="작가 이미지">
+                            <div class="author-name"><a href="wirterfrist.html" style="color:#fff;">Andy Warhol</a></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="introduction_2 intro_5 author-name1">
+                <div class="introduction_intro_1">
+                    <div class="image-container2">
+                        <a href="#">
+                            <img src="img/wi02.png" alt="작가 이미지">
+                            <div class="author-name">Sin Seon Mi</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="introduction_3 intro_5 author-name1">
+                <div class="introduction_intro_1">
+                    <div class="image-container2">
+                        <a href="#">
+                            <img src="img/wi033.png" alt="작가 이미지">
+                            <div class="author-name">Andy</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+    
+
+<!--콜라보레이션-->
+<div class="collaboration">
+    <h2 class="TITLE">콜라보레이션</h2>
+    <div class="collaboration_intro_1">
+        <div class="collaboration_intro1 collabo">
+            <div class="image-container8">
+                <img src="img/col1.png" alt="collaboration image 1">
+                <div class="image-text">Anthony Brown<br>Brooch</div>
+            </div>
+        </div>
+
+        <div class="collaboration_intro2 collabo">
+            <div class="image-container8">
+                <img src="img4/andybook1.jpg" alt="collaboration image 2">
+                <div class="image-text">Warhol textiles<br>Book</div>
+            </div>
+        </div>
+
+        <div class="collaboration_intro3 collabo">
+            <div class="image-container8">
+                <img src="img4/absolut.png" alt="collaboration image 3">
+                <div class="image-text1">Andy Warhol<br>absolute Vodka</div>
+            </div>
+        </div>
+
+        <div class="collaboration_intro4 collabo">
+            <div class="image-container8">
+                <img src="img4/goods2.jpg" alt="collaboration image 4">
+                <div class="image-text1">Andy Warhol<br>T-shirt</div>
+            </div>
+        </div>
+
+        <div class="collaboration_intro5 collabo">
+            <div class="image-container8">
+                <img src="img4/fashion.png" alt="collaboration image 5">
+                <div class="image-text">Andy Warhol<br>Package</div>
+            </div>
+        </div>
+
+        <div class="collaboration_intro6 collabo">
+            <div class="image-container8">
+                <img src="img4/shoes.jpg" alt="collaboration image 6">
+                <div class="image-text1">Andy Warhol<br>Sneakers</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--연계프로그램-->
+
+<div class="digitalButtons">
+    <h2 class="TITLE">ECHO ARTS 연계 프로그램</h2>
+
+    <div class="buttons">
+    
+        <button id="newsBtn1">
+            <p class="Btn2type">소프트카오스 공간 상상</p>
+            <p class="Btn1type">Weekend and Weekday Programs</p>            
+        </button>
+        
+
+        <button id="newsBtn2">
+            <p class="Btn2type">디지털 표현 예술</p>
+            <p class="Btn1type">Digital Expressionism</p>
+        </button>
+
+        <button id="newsBtn3">
+            <p class="Btn2type">미디어 혁신</p>
+            <p class="Btn1type">Media Innovation</p>
+        </button>
+
+    </div>
+</div>    
+
+
+<div class="newsContent">
+        <div id="newsContent1" class="news-content top">
+            <div class="NEWS1">
+                <div class="NEWSContent1">    
+                    <img src="img/timmedia.jpg" alt="미디어아트란?">
+                </div>  
+                <div class="NEWSContent11">  
+                    <h2>디지털미디어</h2>
+                    <div class="h2-underline"></div>
+                    <p class="digi_type">디지털 미디어 전시는 예술과 기술이 결합하여 새로운 형태의 예술 경험을 제공을 합니다.<br> 컴퓨터 그래픽, 비디오, 사운드, 가상 현실(VR), 증강 현실(AR) 등의 디지털 기술을 활용해 관람객들에게 몰입감 있고 다채로운 <br>경험을 선사하며 특히, 디지털 미디어 작품은 관람객이 작품과 상호작용할 수 있는 인터랙티브 요소를 포함하고 있기때문에<br> 보는 것에 그치지 않고 관람객의 참여를 유도하게 합니다. 이를 통해 예술이 고정된 형태를 넘어, 변화하고 진화하는 과정을 보여줍니다.
+                        <br>디지털 미디어의 장점 중 하나는 전통적인 전시 공간을 넘어, 온라인과 가상 전시 공간에서도 전시가 가능하다는 점입니다.<br> 이는 전 세계의 관람객들에게 손쉽게 접근할 수 있는 기회를 제공하며, 더 많은 사람들이 예술을 경험할 수 있는 계기를 마련합니다.<br> 또한, 디지털 미디어는 실시간 데이터나 인공지능(AI) 등을 활용해 예술 작품을 실시간으로 변화시키거나, <br>관람객의 반응에 따라 작품이 달라지는 경험을 제공합니다.
+                        과거의 아날로그 매체에 비해 디지털 미디어는 그 표현의 범위가 훨씬 넓고,  <br>창의적인 실험이 가능해졌습니다. 예술가들은 새로운 기술을 통해 기존의 예술적 한계를 넘어서는 작품을 만들어 내고 있으며,<br> 이러한 작품들은 감상뿐만 아니라 관람객의 참여와 소통을 촉진합니다. 디지털 미디어 전시는 예술의 접근 방식을 확장하고, <br>다양한 문화적 경계를 넘어서는 예술 활동을 가능하게 합니다.
+                        결국, 디지털 미디어 전시는 전통적인 예술 전시와 비교할 때,<br> 예술적 경험을 새롭게 정의하고, 기술과 창의력의 융합을 통해 더 풍성한 예술적 가능성을 탐구하는 장이 되고 있습니다.  <br>이를 통해 예술은 더 이상 전시장에서만 존재하는 것이 아니라, 디지털 세계에서도 새로운 차원의 표현을 가능하게 합니다. 
+                    </p>
+                    <div class="h2-underline"></div>
+                    <ul>                            
+                        <li><a href="#" class="NEWStype">초기 실험적 전시  (1960-1980년대)<a></li>
+                        <li><a href="#" class="NEWStype">인터넷과 멀티미디어 전시 (1990년대)</a></li>
+                        <li><a href="#" class="NEWStype">인터랙티브 전시 (2000년대)</a></li>
+                        <li><a href="#" class="NEWStype">디지털 미디어의 현대 전시 (2010년대~현재)</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>  
+        
+
+        <div id="newsContent2" class="news-content top2">
+            <div class="NEWS1">
+                <div class="NEWSContent2"> 
+                    <img src="img/timmedia33 (1).webp" alt="미디어아트란?">
+                </div>    
+                <div class="NEWSContent22">     
+                    <h2>디지털미디어의 역사</h2>
+                    <div class="h2-underline"></div>
+                    <p class="digi_type"> 디지털 미디어는 텍스트, 이미지, 오디오, 비디오 같은 전통적 형태에서부터 가상현실(VR), 증강현실(AR), 혼합현실(MR) 같은<br>
+                         첨단 기술을 활용한 형태까지 아우르고 있습니다. 이뿐만 아니라, 게임과 같은 상호작용형 미디어, 데이터 시각화처럼 정보를 <br>
+                         시각적으로 표현하는 미디어, 소셜 미디어처럼 네트워크와 연결된 미디어 등 다양한 형태로 발전하고 있습니다. <br>
+                        플랫폼 역시 스마트폰, 태블릿, 컴퓨터, 디지털 키오스크, 웨어러블 기기 등으로 확장되면서 사용자들이 다양한 환경에서 디지털 미디어를 경험할 수 있게 되었습니다.  <br>또한, 디지털 미디어는 AI와 머신러닝을 통해 개인화된 콘텐츠를 제공하며,<br> 사용자의 선호와 행동에 맞춰 실시간으로 적응할 수 있는 유연성을 갖추고 있습니다. <br>이러한 다양성은 디지털 미디어가 단순히 정보를 전달하는 도구를 넘어, 예술, 교육, 엔터테인먼트, 마케팅 등 <br>여러 분야에서 독창적이고 창의적인 <br>가능성을 열어가고 있음을 보여줍니다.디지털 미디어의 다양성은 기술, 콘텐츠, 사용자 경험의 융합에서 비롯된 것이며,<br> 이는 미래 기술 발전에 따라 더욱 풍부해질 것입니다. 
+                    </p>
+                    <div class="h2-underline3"></div>
+                    <ul>                            
+                        <li><a href="#" class="NEWStype">인터랙티브 아트 (Interactive Art)<a></li>
+                        <li><a href="#" class="NEWStype">가상현실 아트 (Virtual Reality Art)</a></li>
+                        <li><a href="#" class="NEWStype">증강현실 아트 (Augmented Reality Art)</a></li>
+                        <li><a href="#" class="NEWStype">프로젝션 맵핑 (Projection Mapping)</a></li>
+                        <li><a href="#" class="NEWStype">데이터 아트 (Data Art)</a></li>
+                        <li><a href="#" class="NEWStype">알고리즘 아트 (Algorithmic Art)</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div id="newsContent3" class="news-content top3">
+            <div class="NEWS1">
+                <div class="NEWSContent3">    
+                    <img src="img/timmedia33 (2).webp" alt="미디어아트란?">
+                </div>
+                <div class="NEWSContent33">    
+                    <h2>미디어혁신</h2>
+                    <div class="h2-underline"></div>
+                    <p class="digi_type">미디어 혁신은 디지털 기술을 통해 전시 경험을 새롭게 정의하는 과정으로, 관람객의 몰입감과 참여를 극대화합니다.<br>
+                         가상현실(VR)과 증강현실(AR) 같은 기술은 관람객이 전시에 깊이 몰입할 수 있는 환경을 제공하며, <br>터치스크린이나 모션 센서를 활용한 상호작용성은 전시와 관람객 간의 직접적인 연결을 만듭니다.<br> 또한, AI와 데이터 분석 기술을 통해 관람객의 선호와 행동 데이터를 반영한 맞춤형 콘텐츠를 제공할 수 있습니다. <br>영상, 음향, 조명 등의 멀티미디어 통합은 감각적인 몰입을 강화하고, 디지털 기술은 장애인을 포함한 다양한 관람객의 접근성을  <br>높이는 데도 기여합니다. 예를 들어, 일본의 팀랩은 몰입형 디지털 아트를 통해 예술과 기술의 융합을 선보였으며,  <br>바티칸 박물관은 VR 투어로 세계 어디서나 유적을 체험할 수 있게 했습니다. 이러한 혁신은 단순한 기술 도입을 넘어 전시의 본질을 변화시키며, 미래에는 AI와 메타버스 같은 기술을 통해 <br>더욱 개인화되고 어디에서나 접근 가능한 전시가 가능해질 것입니다.<br>
+                          미디어 혁신은 기술적 발전뿐만 아니라 전시와 관람객 간의 새로운 연결 방식을 창조하며, <br>감동과 영감을 전달하는 중요한 도구로 자리 잡고 있습니다. 
+                    </p>
+                    <div class="h2-underline2"></div>
+                    <ul>                            
+                        <li><a href="#" class="NEWStype">가상현실(VR)과 증강현실(AR)<a></li>
+                        <li><a href="#" class="NEWStype">인터렉티브 디스플레이</a></li>
+                        <li><a href="#" class="NEWStype">3D</a></li>
+                        <li><a href="#" class="NEWStype">접근성 & 포용성</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>   
+    
+</div>
+        
+
+
+<!--행사.공연-->        
+<div class="concert-box">
+    <h2 class="TITLE">ECHO ARTS 행사.공연</h2>  
+    <div class="concert">  
+        <div class="concert1">    
+            <div class="img-box1"><!--콘서트이미지-->
+                <img src="img/concert1.jpg" alt="concert">
+            </div>
+            <div class="title1"> 
+                <span>ECHO ART :</span>
+                <h4>자연과 음악으로 채우는 휴식</h4>  
+                <h3>여름 힐링 음악회</h3>
+            
+                <p class="subTitle">2025.06.05.PM:06:00</p>
+                <p class="title4">ECHO ART 전시관 무지개 홀</p>
+            </div>
+        </div>
+
+
+    
+    
+        <div class="concert2">
+            <div class="img-box2">
+                <img src="img/concert2.jpg" alt="concert">
+            </div>
+            <div class="title2">   
+                    <span>ECHO ART :</span> 
+                    <h4>소리와 빛의 아름다운 교감</h4>  
+                    <h3>빛의 동행  </h3>
+                
+                    <p class="subTitle22">2025. 06. 05. PM:08:00</p>
+                    <p class="title4">ECHO ART A 전시관 정문 앞</p>
+            </div>
+        </div>   
+        
+    
+            
+    
+        <div class="concert3">
+            <div class="img-box3"><!--콘서트이미지-->
+            <img src="img/concert3.jpg" alt="concert">
+            </div>
+            <div class="title3">  
+                <span>ECHO ART :</span>
+                <h4>낭만이 흐르는 음악</h4>
+                <h3>클래식 드라이브</h3>
+            
+                <p class="subTitle33">2025.05.01.PM:07:00</p>
+                <p class="title4">ECHO ART 야외 초록숲홀</p>
+            </div>
+        </div>
+    </div>     
+</div>
+        
+
+<!--멤버쉽-->              
+<div class="membership">
+    <h2 class="TITLE">멤버쉽</h2>
+    <div class="member">
+        <div class="member_1 membership_1">
+            <p class="membership-text"><span class="member_type2">CLAASIC MEMBERSHIP</span><br> 
+                <span class="member_type3"> 전시 관람의 품격을 높이다.</span><br>
+               <span class="member_type1"> "Classic Membership - Elevate Your Exhibition Experience."</span></p>
+        </div>
+        <div class="member_4 membership_1">
+            <div class="member_2 membership_1">
+                <p class="membership-text"><span class="member_type2">FREEPASS MEMBERSHIP</span><br>
+                    <span class="member_type3">언제든지 자유롭게 전시를 즐기세요.</span><br>
+                    <span class="member_type1">   "Free Pass Membership - Enjoy Exhibitions Anytime, Anywhere."</span></p>
+            </div>
+            <div class="member_3 membership_1">
+                <p class="membership-text"><span class="member_type2">VIP MEMBERSHIP</span><br>
+                    <span class="member_type3">독점 전시회와<br> 프리미엄 혜택을 누리세요.</span><br>
+                    <span class="member_type1">"VIP Membership - Exclusive Exhibitions and Premium Benefits Await."</span></p>
+            </div>
+        </div>     
+    </div>
+</div>
+
+
+
+<div class="menu-toggle1">
+    <div class="menu-button1">
+        <a href="#" class="menu_button_type"></a>
+        <a href="#" class="menu_button_type"></a>
+    </div>
+</div>
+
+
+<div class="menu-toggle">
+    <div class="menu-button">
+      
+    </div>
+
+    <div class="side-nav">
+
+        <div class="login_menu">
+            <div class="login_img">
+                <img src="img/login_1.png">
+
+            </div>
+            <div class="login_type1">
+                <p class="login_p1">로그인</p>
+                <p class="login_p2">가입하기</p>
+                
+               
+            </div>
+        </div>
+        <ul class="main-menu">
+            <li class="menu-item">
+                <a href="#" class="main-menu-button">Echo Art</a>
+                <ul class="sub-menu">
+                    <li><a href="#">Echo Art소개 </a></li>
+                    <li><a href="#">공연장안내</a></li>
+                    <li><a href="#">층별안내</a></li>
+                    <li><a href="#">편의시설</a></li>
+                
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a href="#" class="main-menu-button">관람정보</a>
+                <ul class="sub-menu">
+                    <li><a href="#">전시예매</a></li>
+                    <li><a href="#">예매취소</a></li>
+                    <li><a href="#">예정전시</a></li>
+                    <li><a href="#">지난전시</a></li>
+                    <li><a href="#">작가소개</a></li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a href="#" class="main-menu-button">전시안내</a>
+                <ul class="sub-menu">
+                    <li><a href="#">상설전시</a></li>
+                    <li><a href="#">특별전시</a></li>
+                    <li><a href="#">디지털미디어</a></li>
+                    <li><a href="#">오디오투어</a></li>
+                    
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a href="#" class="main-menu-button">문화행사</a>
+                <ul class="sub-menu">
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">공연리뷰</a></li>
+                    <li><a href="#">오시는길</a></li>
+                    <li><a href="#">질문과답변</a></li>
+                    
+                </ul>
+            </li>
+              <li class="menu-item">
+                <a href="#" class="main-menu-button" >소식</a>
+                <ul class="sub-menu">
+                    <li><a href="#">연계프로그램</a></li>
+                    <li><a href="#">행사</a></li>
+                    <li><a href="#">공연</a></li>
+                    <li><a href="#">멤버쉽.이벤트</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+ 
+
+
+
+
+
+
+
+
+
+                
+        <footer1>
+
+            <div class="footerline1"></div>
+            <!--<div class="footer1main">
+                <div class="footercontent1"></div>
+                <div class="footercontent2"></div>
+                <div class="footercontent3"></div>
+            </div>--> 
+        
+            <div class="footer-nav2">
+                <div>
+                    <a href="#"><button class="button1" onclick="plzwork3()">티켓</button></a>
+                </div>
+                <div>
+                    <a href="#"><button class="button2" onclick="plzwork3()">메일링 서비스</button></a>
+                </div>
+                <div>
+                    <a href="#"><button class="button2" onclick="plzwork3()">소중한 리뷰를 남겨주세요</button></a>
+                </div>
+            </div>
+        
+            <div class="footer-nav3-1">
+                <li><a href="">법적고지</a></li>
+                <li><a href="">개인데이터</a></li>
+                <li><a href="">쿠키</a></li>
+                <li><a href="">접근성</a></li>
+                <li><a href="">크래딧</a></li>
+                <li><a href="">사진 크래딧</a></li>
+            </div>
+        
+            <div class="main4 ">
+                <a href=""><img src="img/digiicon11.png"></a>
+                <a href=""><img src="img/digiicon22.png"> </a>
+                <a href=""><img src="img/digiicon33.png"></a>
+                <a href=""><img src="img/digiicon44.png"></a>
+            </div>
+        
+            <div class="footerline2"></div>
+        
+            <div class="footer-address">
+                <ul class="footerul">   
+                    <li class=company-attr>상호  : ECHO ARTS 대표번호 : 7777-0017 , 사업장 주소  : 서울 미추홀구 인주대로 366번길 (주안동, ECHO ARTS)</li>
+                    <li class=company-attr>대표자명 : 백유진  Tel 6460- 5271 (평일 화 - 금  am10 : 30 - pm 6 )</li>
+                    <li class=company-attr>Copyright ⓒ 2025 ECHO ARTS All right reserved.</li>
+                    <li class=company-attr>이용약관 개인정보처리방침</li>
+                    <li class=company-attr>법적 고지 개인데이터 쿠키 접근성 크레딧 사진 크레딧</li>
+                  
+                </ul> 
+            </div>
+        
+        
+        </footer1>
+
+
+
+
+        
+
+</div>
+</body>
+<script>
+let currentSlide = 0; 
+const totalSlides = 10; 
+const slides = document.querySelectorAll('.poster-slide'); 
+const container = document.querySelector('.poster-container'); 
+
+function moveSlide(direction) {
+    
+    currentSlide += direction;
+
+    if (currentSlide >= totalSlides - 2) { 
+        currentSlide = 0; 
+    } else if (currentSlide < 0) {
+        currentSlide = totalSlides - 3; 
+    }
+
+
+    container.style.transform = `translateX(-${currentSlide * 33.33}%)`;
+}
+
+
+
+//
+
+
+let currentIndex = 0;
+
+const images = document.querySelectorAll('.photo-grid .avant_1, .photo-grid .avant_2, .photo-grid .avant_3, .photo-grid .avant_4, .photo-grid .avant_5'); // 모든 이미지
+const prevButton = document.querySelector('.prev-btn');
+const nextButton = document.querySelector('.next-btn');
+const dots = document.querySelectorAll('.dot');
+
+
+function updateSlide() {
+    
+    document.querySelector('.photo-grid').style.transform = `translateX(-${currentIndex * 100}%)`;
+
+    
+    dots.forEach((dot, index) => {
+        if (index === currentIndex) {
+            dot.classList.add('active');
+        } else {
+            dot.classList.remove('active');
+        }
+    });
+}
+
+
+prevButton.addEventListener('click', () => {
+    currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1; 
+    updateSlide();
+});
+
+
+nextButton.addEventListener('click', () => {
+    currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+});
+
+
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        currentIndex = index;
+        updateSlide();
+    });
+});
+
+
+updateSlide();
+
+
+
+
+
+
+
+
+//네비
+
+
+document.querySelector('.menu-toggle').addEventListener('click', () => {
+    document.querySelector('.drawer-nav').classList.toggle('open');
+});
+
+
+
+
+
+//네비메뉴
+
+// 메뉴 버튼 클릭 시 네비게이션 슬라이드 및 하위 메뉴 토글
+document.querySelector('.menu-toggle').addEventListener('click', function(e) {
+    // 메뉴 버튼 클릭 시
+    if (e.target.closest('.menu-button')) {
+        this.classList.toggle('open'); // 'open' 클래스를 토글하여 네비 열기/닫기
+    }
+
+    // 주메뉴 클릭 시 하위 메뉴 토글
+    if (e.target.closest('.main-menu-button')) {
+        const parentMenu = e.target.closest('.menu-item');
+        parentMenu.classList.toggle('active'); // 주메뉴를 클릭하면 하위 메뉴가 토글됨
+    }
+});
+
+
+</script>
+</html>

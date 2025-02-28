@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+/* 전체 레이아웃 설정 */
+/* 기본 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* 직사각형 메뉴 버튼 */
+.menu-toggle {
+    position: relative;
+    z-index: 1100; /* 네비게이션 메뉴보다 항상 위에 있도록 설정 */
+}
+
+/* 직사각형 메뉴 버튼 */
+.menu-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 120px;
+    height: 50px;
+    background-color: #ff0000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 8px;
+    z-index: 1101; /* 메뉴 버튼은 항상 가장 위에 있도록 설정 */
+}
+
+/* 네비게이션 메뉴 */
+.side-nav {
+    position: fixed;
+    left: -100%; /* 기본적으로 화면 밖에 위치 */
+    top: 0;
+    width: 250px; /* 네비게이션 너비 */
+    height: 100%;
+    background-color: #333;
+    transition: left 0.3s ease-in-out;
+    z-index: 1000; /* 네비게이션 메뉴는 버튼보다 아래 */
+    padding-top: 20px;
+}
+
+/* 네비 메뉴 스타일 */
+.side-nav ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.menu-item {
+    padding: 15px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.menu-item a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.sub-menu {
+    list-style: none;
+    padding-left: 20px;
+    display: none; /* 기본적으로 하위 메뉴 숨기기 */
+}
+
+.sub-menu li {
+    padding: 5px 0;
+}
+
+.menu-item.active .sub-menu {
+    display: block; /* 활성화된 주메뉴의 하위 메뉴만 보이게 */
+}
+
+/* 메뉴 슬라이드 효과 */
+.menu-toggle.open .side-nav {
+    left: 0; /* 네비게이션 메뉴가 오른쪽으로 슬라이드 */
+}
+
+/* 메뉴 버튼 (열기) */
+.menu-toggle.open .menu-button {
+    background-color: #555; /* 네비게이션이 열리면 버튼 색 변경 */
+}
+
+/* 메뉴 버튼 클릭 시 효과 */
+.menu-toggle.open .menu-button {
+    background-color: #ff0000; /* 메뉴 열릴 때 버튼 색 */
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="menu-toggle">
+        <div class="menu-button">
+            메뉴 열기
+        </div>
+    
+        <div class="side-nav">
+            <ul class="main-menu">
+                <li class="menu-item">
+                    <a href="#" class="main-menu-button">주메뉴 1</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">하위 메뉴 1-1</a></li>
+                        <li><a href="#">하위 메뉴 1-2</a></li>
+                        <li><a href="#">하위 메뉴 1-3</a></li>
+                        <li><a href="#">하위 메뉴 1-4</a></li>
+                        <li><a href="#">하위 메뉴 1-5</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="main-menu-button">주메뉴 2</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">하위 메뉴 2-1</a></li>
+                        <li><a href="#">하위 메뉴 2-2</a></li>
+                        <li><a href="#">하위 메뉴 2-3</a></li>
+                        <li><a href="#">하위 메뉴 2-4</a></li>
+                        <li><a href="#">하위 메뉴 2-5</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    
+</body>
+<script>
+// 메뉴 버튼 클릭 시 네비게이션 슬라이드 및 하위 메뉴 토글
+document.querySelector('.menu-toggle').addEventListener('click', function(e) {
+    // 메뉴 버튼 클릭 시
+    if (e.target.closest('.menu-button')) {
+        this.classList.toggle('open'); // 'open' 클래스를 토글하여 네비 열기/닫기
+    }
+
+    // 주메뉴 클릭 시 하위 메뉴 토글
+    if (e.target.closest('.main-menu-button')) {
+        const parentMenu = e.target.closest('.menu-item');
+        parentMenu.classList.toggle('active'); // 주메뉴를 클릭하면 하위 메뉴가 토글됨
+    }
+});
+
+
+</script>
+</html>

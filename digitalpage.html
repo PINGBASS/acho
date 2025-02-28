@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>디지털미디어페이지</title>
+    <link rel="stylesheet" href="digiatlpage.css">
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+    <!--<script src="js/jquery.easing.1.3.js"></script>-->
+    <script src="main.js" defer></script>
+    <script>
+
+window.addEventListener('scroll', function() {
+    let scrollPosition = window.scrollY; 
+    
+  
+    let banners = document.querySelectorAll('.banner');
+    
+    banners.forEach((banner, index) => {
+    
+        let bannerOffset = banner.offsetTop; 
+        let bannerHeight = banner.offsetHeight; 
+
+       
+        if (scrollPosition >= bannerOffset - window.innerHeight && scrollPosition <= bannerOffset + bannerHeight) {
+            banner.style.backgroundImage = `${index + 1}`; // 각 배경 이미지 적용
+        }
+    });//url('img/digital
+});
+
+//----------------------------------------------------------------------------
+
+
+       window.addEventListener('scroll', function() {
+  const images = document.querySelectorAll('.image1'); 
+  const screenHeight = window.innerHeight;
+
+  images.forEach((image, index) => {
+    const imagePosition = image.getBoundingClientRect().top; 
+
+    
+    if (imagePosition < screenHeight) {
+      setTimeout(() => {
+        image.classList.add('visible');
+      }, index * 500);
+    }
+  });
+});
+
+
+//-------------허버시 비디오 소리가 난다.
+  
+  const videos = document.querySelectorAll('video');
+        
+        videos.forEach(video => {
+         
+            video.addEventListener('mouseover', function() {
+                video.muted = false;  // 소리나게
+            });
+
+          
+            video.addEventListener('mouseout', function() {
+                video.muted = true;  // 소리안나게
+            });
+        });
+
+
+
+
+
+//---------------버튼 세개 눌렀을때 이미지 다르게 보익 ㅔ하기
+
+document.addEventListener("DOMContentLoaded", function() {
+    // 처음 화면에 첫 번째 버튼만 활성화하도록 설정
+    document.getElementById('newsContent1').style.display = 'block'; // 1소식만 보이게
+    document.getElementById('newsContent2').style.display = 'none'; // 2소식은숨김
+    document.getElementById('newsContent3').style.display = 'none'; //3번째소식은숨김
+
+    document.getElementById('newsBtn1').addEventListener('click', function() {
+        document.getElementById('newsContent1').style.display = 'block';
+        document.getElementById('newsContent2').style.display = 'none';
+        document.getElementById('newsContent3').style.display = 'none';
+    });
+
+    document.getElementById('newsBtn2').addEventListener('click', function() {
+        document.getElementById('newsContent2').style.display = 'block';
+        document.getElementById('newsContent1').style.display = 'none';
+        document.getElementById('newsContent3').style.display = 'none';
+    });
+
+    document.getElementById('newsBtn3').addEventListener('click', function() {
+        document.getElementById('newsContent3').style.display = 'block';
+        document.getElementById('newsContent1').style.display = 'none';
+        document.getElementById('newsContent2').style.display = 'none';
+    });
+});
+
+
+    </script>
+
+
+</head>
+<body>
+  
+<div id="digitalpage"> 
+    
+        <div>
+            <div class="MAIN1" >
+                        <div class="main1">
+                            <div class="main2">
+                                <a href="http://funkyone1.dothome.co.kr/acho/mainpage.html#" class="typea">HOME</a>
+                                <a href="" class="typeb">Digital Media</a>
+                                <a href="" class="typec">exhibition</a>
+
+                            </div>
+                            <div class="div3"><img src="img/echoartslogoorangemainwihte3.png"></div>
+                            <div class="main3">
+                                <a href=""><img src="img/digiicon11.png"></a>
+                                <a href=""><img src="img/digiicon22.png"> </a>
+                                <a href=""><img src="img/digiicon33.png"></a>
+                                <a href=""><img src="img/digiicon44.png"></a>
+                            </div>
+                        </div>
+            </div>
+
+            <div class="container">
+                        <div class="containertext">
+                            <p class="">DIGITALMEDIA</p>
+                            <p class="ddd">ECHOARTS</p>
+                        </div>
+            </div>
+        </div>
+                <!--메인 글씨 올라오는 부분 end-->
+
+
+        <div class="digitalButtons">
+                <div class="buttons">
+                
+                    <button id="newsBtn1">
+                        <p class="Btn2type">디지털 미디어</p>
+                        <p class="Btn1type">DigitalMedia</p>            
+                    </button>
+                    
+
+                    <button id="newsBtn2">
+                        <p class="Btn2type">디지털 표현 예술</p>
+                        <p class="Btn1type">Digital Expressionism</p>
+                    </button>
+
+                    <button id="newsBtn3">
+                        <p class="Btn2type">미디어 혁신</p>
+                        <p class="Btn1type">Media Innovation</p>
+                    </button>
+
+                </div>
+        </div>    
+
+
+        <div class="newsContent">
+                    <div id="newsContent1" class="news-content top">
+                        <div class="NEWS1">
+                            <div class="NEWSContent1">    
+                                <img src="img/timmedia.jpg" alt="미디어아트란?">
+                            </div>  
+                            <div class="NEWSContent11">  
+                                <h2>디지털미디어</h2>
+                                <div class="h2-underline"></div>
+                                <p>디지털 미디어 전시는 예술과 기술이 결합하여 새로운 형태의 예술 경험을 제공을 합니다.<br> 컴퓨터 그래픽, 비디오, 사운드, 가상 현실(VR), 증강 현실(AR) 등의 디지털 기술을 활용해 관람객들에게 몰입감 있고 다채로운 <br>경험을 선사하며 특히, 디지털 미디어 작품은 관람객이 작품과 상호작용할 수 있는 인터랙티브 요소를 포함하고 있기때문에<br> 보는 것에 그치지 않고 관람객의 참여를 유도하게 합니다. 이를 통해 예술이 고정된 형태를 넘어, 변화하고 진화하는 과정을 보여줍니다.
+                                    <br>디지털 미디어의 장점 중 하나는 전통적인 전시 공간을 넘어, 온라인과 가상 전시 공간에서도 전시가 가능하다는 점입니다.<br> 이는 전 세계의 관람객들에게 손쉽게 접근할 수 있는 기회를 제공하며, 더 많은 사람들이 예술을 경험할 수 있는 계기를 마련합니다.<br> 또한, 디지털 미디어는 실시간 데이터나 인공지능(AI) 등을 활용해 예술 작품을 실시간으로 변화시키거나, <br>관람객의 반응에 따라 작품이 달라지는 경험을 제공합니다.
+                                    과거의 아날로그 매체에 비해 디지털 미디어는 그 표현의 범위가 훨씬 넓고, 창의적인 실험이 가능해졌습니다. 예술가들은 새로운 기술을 통해 기존의 예술적 한계를 넘어서는 작품을 만들어 내고 있으며,<br> 이러한 작품들은 감상뿐만 아니라 관람객의 참여와 소통을 촉진합니다. 디지털 미디어 전시는 예술의 접근 방식을 확장하고, <br>다양한 문화적 경계를 넘어서는 예술 활동을 가능하게 합니다.
+                                    결국, 디지털 미디어 전시는 전통적인 예술 전시와 비교할 때,<br> 예술적 경험을 새롭게 정의하고, 기술과 창의력의 융합을 통해 더 풍성한 예술적 가능성을 탐구하는 장이 되고 있습니다. 이를 통해 예술은 더 이상 전시장에서만 존재하는 것이 아니라, 디지털 세계에서도 새로운 차원의 표현을 가능하게 합니다. 
+                                </p>
+                                <div class="h2-underline"></div>
+                                <ul>                            
+                                    <li><a href="#" class="NEWStype">초기 실험적 전시  (1960-1980년대)<a></li>
+                                    <li><a href="#" class="NEWStype">인터넷과 멀티미디어 전시 (1990년대)</a></li>
+                                    <li><a href="#" class="NEWStype">인터랙티브 전시 (2000년대)</a></li>
+                                    <li><a href="#" class="NEWStype">디지털 미디어의 현대 전시 (2010년대~현재)</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>  
+                    
+
+                    <div id="newsContent2" class="news-content top2">
+                        <div class="NEWS1">
+                            <div class="NEWSContent2"> 
+                                <img src="img/timmedia33 (1).webp" alt="미디어아트란?">
+                            </div>    
+                            <div class="NEWSContent22">     
+                                <h2>디지털미디어의 역사</h2>
+                                <div class="h2-underline"></div>
+                                <p> 디지털 미디어는 텍스트, 이미지, 오디오, 비디오 같은 전통적 형태에서부터 가상현실(VR), 증강현실(AR), 혼합현실(MR) 같은<br>
+                                     첨단 기술을 활용한 형태까지 아우르고 있습니다. 이뿐만 아니라, 게임과 같은 상호작용형 미디어, 데이터 시각화처럼 정보를 <br>
+                                     시각적으로 표현하는 미디어, 소셜 미디어처럼 네트워크와 연결된 미디어 등 다양한 형태로 발전하고 있습니다. <br>
+                                    플랫폼 역시 스마트폰, 태블릿, 컴퓨터, 디지털 키오스크, 웨어러블 기기 등으로 확장되면서 사용자들이 다양한 환경에서 디지털 미디어를 경험할 수 있게 되었습니다. 또한, 디지털 미디어는 AI와 머신러닝을 통해 개인화된 콘텐츠를 제공하며,<br> 사용자의 선호와 행동에 맞춰 실시간으로 적응할 수 있는 유연성을 갖추고 있습니다. <br>이러한 다양성은 디지털 미디어가 단순히 정보를 전달하는 도구를 넘어, 예술, 교육, 엔터테인먼트, 마케팅 등 <br>여러 분야에서 독창적이고 창의적인 가능성을 열어가고 있음을 보여줍니다.디지털 미디어의 다양성은 기술, 콘텐츠, 사용자 경험의 융합에서 비롯된 것이며,<br> 이는 미래 기술 발전에 따라 더욱 풍부해질 것입니다. 
+                                </p>
+                                <div class="h2-underline3"></div>
+                                <ul>                            
+                                    <li><a href="#" class="NEWStype">인터랙티브 아트 (Interactive Art)<a></li>
+                                    <li><a href="#" class="NEWStype">가상현실 아트 (Virtual Reality Art)</a></li>
+                                    <li><a href="#" class="NEWStype">증강현실 아트 (Augmented Reality Art)</a></li>
+                                    <li><a href="#" class="NEWStype">프로젝션 맵핑 (Projection Mapping)</a></li>
+                                    <li><a href="#" class="NEWStype">데이터 아트 (Data Art)</a></li>
+                                    <li><a href="#" class="NEWStype">알고리즘 아트 (Algorithmic Art)</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div id="newsContent3" class="news-content top3">
+                        <div class="NEWS1">
+                            <div class="NEWSContent3">    
+                                <img src="img/timmedia33 (2).webp" alt="미디어아트란?">
+                            </div>
+                            <div class="NEWSContent33">    
+                                <h2>미디어혁신</h2>
+                                <div class="h2-underline"></div>
+                                <p>미디어 혁신은 디지털 기술을 통해 전시 경험을 새롭게 정의하는 과정으로, 관람객의 몰입감과 참여를 극대화합니다.<br>
+                                     가상현실(VR)과 증강현실(AR) 같은 기술은 관람객이 전시에 깊이 몰입할 수 있는 환경을 제공하며, <br>터치스크린이나 모션 센서를 활용한 상호작용성은 전시와 관람객 간의 직접적인 연결을 만듭니다.<br> 또한, AI와 데이터 분석 기술을 통해 관람객의 선호와 행동 데이터를 반영한 맞춤형 콘텐츠를 제공할 수 있습니다. <br>영상, 음향, 조명 등의 멀티미디어 통합은 감각적인 몰입을 강화하고, 디지털 기술은 장애인을 포함한 다양한 관람객의 접근성을 높이는 데도 기여합니다. 예를 들어, 일본의 팀랩은 몰입형 디지털 아트를 통해 예술과 기술의 융합을 선보였으며, 바티칸 박물관은 VR 투어로 세계 어디서나 유적을 체험할 수 있게 했습니다. 이러한 혁신은 단순한 기술 도입을 넘어 전시의 본질을 변화시키며, 미래에는 AI와 메타버스 같은 기술을 통해 <br>더욱 개인화되고 어디에서나 접근 가능한 전시가 가능해질 것입니다.<br>
+                                      미디어 혁신은 기술적 발전뿐만 아니라 전시와 관람객 간의 새로운 연결 방식을 창조하며, <br>감동과 영감을 전달하는 중요한 도구로 자리 잡고 있습니다. 
+                                </p>
+                                <div class="h2-underline2"></div>
+                                <ul>                            
+                                    <li><a href="#" class="NEWStype">가상현실(VR)과 증강현실(AR)<a></li>
+                                    <li><a href="#" class="NEWStype">인터렉티브 디스플레이</a></li>
+                                    <li><a href="#" class="NEWStype">3D</a></li>
+                                    <li><a href="#" class="NEWStype">접근성 & 포용성</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>   
+                
+        </div>
+        <!--버튼 세개 end-->
+      <!--  <div class="border"></div>-->
+
+        <div class="image-container">
+
+                <div>
+                   <h2>디지털미디어전시</h2>
+                </div>
+
+                <div class="imgimg2">
+                    <div class="disitalimg1">
+                        <img id="image2" class="image1" src="img/subdigital1.png" alt="Image2">
+                        <div class="imgtitle11" >
+                            <p class="p1">디지털 유토피아 </p>
+                            <p class="p5">(Digital Utopia)</p>
+                            <p class="p4">상상력을 현실로 바꾸는 새로운 세계</p>
+                            <p class="p2">Subtitle: How Digital Magic Transforms Reality</p>
+                           
+                            <p class="p3">Echo 무지개홀</p>
+                        </div>
+                        <div class="imgtitle111" >
+                            <p class="aa1">디지털 유토피아 </p>
+                            <p class="aa2">(Digital Utopia)</p>
+                            <p class="aa3">상상력을 현실로 바꾸는 새로운 세계</p>
+                            <p class="aa4">Subtitle: How Digital Magic<br> Transforms Reality</p>
+                           
+                            <p class="aa5">Echo 무지개홀</p>
+                        </div>
+                    </div>
+
+                   
+                    
+                    <div class="disitalimg7">
+                        <img id="image33" class="image1" src="img/media1.gif" alt="Image3" >
+                        <div class="imgtitle22" >
+                            <p class="p1">빛의 조각</p>
+                            <p class="p11">빛의 조각</p>
+                            <p class="p5">(Fragments of Light)</p>
+                            <p class="p4">어둠 속에서 피어나는 찬란한 순간들</p>
+                            <p class="p2">Fragments of Light: Brilliance unveiled</p>
+                            <p class="p22">Fragments of Light: <br>Brilliance unveiled</p>
+                            <p class="p3">Echo 무지개홀</p>
+                        </div>
+                        <div class="imgtitle222" >
+                            <p class="aa1">빛의 조각</p>
+                           
+                            <p class="aa2">(Fragments of Light)</p>
+                            <p class="aa3">어둠 속에서 피어나는 찬란한 순간들</p>
+                            <p class="aa4">Fragments of Light: <br>Brilliance unveiled</p>
+                         
+                            <p class="aa5">Echo 무지개홀</p>
+                        </div>
+                    </div>
+
+                    <div class="disitalimg3">
+                        <img id="image4" class="image1" src="img/art2.jpg" art="Image4" >
+                        <div class="imgtitle33" >
+                            <p class="p1">꿈꾸는 코드 </p>
+                            <p class="p5">(Dreaming in Code)</p>
+                            <p class="p4">디지털 속에서 펼쳐지는 상상력의 비밀</p>
+                            <p class="p2">Subtitle: The Secret of Imagination Unfolding in the Digital World</p>
+                            <p class="p3">Echo 무지개홀</p>
+                        </div>
+                        <div class="imgtitle333" >
+                            <p class="aa1">꿈꾸는 코드 </p>
+                            <p class="aa2">(Dreaming in Code)</p>
+                            <p class="aa3">디지털 속에서 펼쳐지는 상상력의 비밀</p>
+                            <p class="aa4">Subtitle: The Secret of Imagination Unfolding in the Digital World</p>
+                            <p class="aa5">Echo 무지개홀</p>
+                        </div>
+                    </div>    
+
+                    <div class="disitalimg4">
+                        <img id="image5" class="image1" src="img/subdigital2.png" alt="Image5" >
+                        <div class="imgtitle44" >
+                            <p class="p1">가상 현실 탈출</p>
+                            <p class="p5">(Escape from Virtual Reality)</p>
+                            <p class="p4">디지털 너머의 진짜 세상을 찾다</p>
+                            <p class="p2">
+                                Subtitle: Unveiling the Hidden Powers of Creativity in the Digital World</p>
+                            <p class="p3">Echo 무지개홀</p>
+                        </div>
+                        <div class="imgtitle444" >
+                            <p class="aa1">가상 현실 탈출</p>
+                            <p class="aa2">(Escape from Virtual Reality)</p>
+                            <p class="aa3">디지털 너머의 진짜 세상을 찾다</p>
+                            <p class="aa4">
+                                Subtitle: Unveiling the Hidden Powers of Creativity in the Digital World</p>
+                            <p class="aa5">Echo 무지개홀</p>
+                        </div>
+                    </div>  
+
+                    <div class="disitalimg5">
+                        <img id="image6" class="image1" src="img/subdigital3.png" alt="Image6">
+                        <div class="imgtitle55" >
+                            <p class="p1">마그마의 손길</p>
+                            <p class="p5">Magmatic Reach</p>
+                            <p class="p4">디지털 속에서 하늘로 향한 여정</p>
+                            <p class="p2">A fusion of fire and sky, reaching for the heavens</p>
+                            <p class="p3">Echo 무지개홀</p>
+                        </div>
+                        <div class="imgtitle555" >
+                            <p class="aa1">마그마의 손길</p>
+                            <p class="aa2">Magmatic Reach</p>
+                            <p class="aa3">디지털 속에서 하늘로 향한 여정</p>
+                            <p class="aa4">A fusion of fire and sky, <reaching for the heavens</p>
+                            <p class="aa5">Echo 무지개홀</p>
+                        </div>
+                    </div>    
+
+                    <div class="disitalimg6">
+                        <img id="image7" class="image1" src="img/subdigital4.png" alt="Image7">
+                        <div class="imgtitle66" >
+                            <p class="p1">픽셀 파라다이스 </p>
+                            <p class="p11">픽셀 파라다이스 </p>
+                            <p class="p5">(Pixel Paradise) </p>
+                            <p class="p4">디지털 공간에서 펼쳐지는 꿈같은 여정</p>
+                            <p class="p2">Finding the Real World <br>Beyond the Digital Screen</p>
+                            <p class="p22">Finding the Real World <br>Beyond the Digital Screen</p>
+                            <p class="p3">Echo ARTS SIGNATURE 홀</p>
+                        </div>
+                        <div class="imgtitle666" >
+                            <p class="aa1">픽셀 파라다이스 </p>
+                            <p class="aa2">(Pixel Paradise) </p>
+                            <p class="aa3">디지털 공간에서 펼쳐지는 꿈같은 여정</p>
+                            <p class="aa4">Finding the Real World <br>Beyond the Digital Screen</p>
+                            <p class="aa5">Echo ARTS SIGNATURE 홀</p>
+                        </div>
+                    </div> 
+                </div>
+                
+                
+        </div>
+
+
+        <!--데스트탑 -->
+        <div class="VR_AR2" >
+            <h2>VR/AR</h2>
+            <div class="vr_ar1">
+                <!-- 비디오 1 -->
+                <div class="vrar1">
+                    <div>
+                        <video id="video1" controls autoplay muted class="video2">
+                            <source src="img/art11.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div>
+                        <p class="Btn2type2">Digital Media Exhibition</p>
+                    </div>
+                </div>
+    
+                <!-- 비디오 2 -->
+                <div class="vrar1">
+                    <div>
+                        <video id="video2" controls autoplay muted class="video1 video2">
+                            <source src="img/art33.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div>
+                        <p class="Btn2type2">Digital Media Exhibition</p>
+                    </div>
+                </div>
+    
+                <!-- 비디오 3 -->
+                <div class="vrar1">
+                    <div>
+                        <video id="video3" controls autoplay muted class="video1 video2">
+                            <source src="img/art22.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div>
+                        <p class="Btn2type2">Digital Media Exhibition</p>
+                    </div>
+                </div>
+    
+                <!-- 비디오 4 -->
+                <div class="vrar1">
+                    <div>
+                        <video id="video4" controls autoplay muted class="video1 video2">
+                            <source src="img/art55.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div>
+                        <p class="Btn2type2">Digital Media Exhibition</p>
+                    </div>
+                </div>
+    
+                <!-- 비디오 5 -->
+                <div class="vrar1">
+                    <div>
+                        <video id="video5" controls autoplay muted class="video1 video2">
+                            <source src="img/art99 (2).mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div>
+                        <p class="Btn2type2">Digital Media Exhibition</p>
+                    </div>
+                </div>
+    
+                <!-- 비디오 6 -->
+                <div class="vrar1">
+                    <div>
+                        <video id="video6" controls autoplay muted class="video1 video2">
+                            <source src="img/art77 (1).mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div>
+                        <p class="Btn2type2">Digital Media Exhibition</p>
+                    </div>
+                </div>
+    
+                <!-- 비디오 7 -->
+                <div class="vrar1">
+                    <div>
+                        <video id="video7" controls autoplay muted class="video1 video2">
+                            <source src="img/art77 (2).mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div>
+                        <p class="Btn2type2">Digital Media Exhibition</p>
+                    </div>
+                </div>
+    
+                <!-- 비디오 8 -->
+                <div class="vrar1">
+                    <div>
+                        <video id="video8" controls autoplay muted class="video1 video2">
+                            <source src="img/art111.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div>
+                        <p class="Btn2type2">Digital Media Exhibition</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--모바일-->
+        <div class="VR_AR22">
+            <h2>VR/AR</h2>
+            <div class="vr_ar12">
+                <div class="vrflex1">   <!-- 비디오 1 -->
+                    <div class="vrar12">
+                        <div>
+                            <video id="video12" controls autoplay muted class="video22 video12">
+                                <source src="img/art11.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div>
+                            <p class="Btn2type22">Digital Media Exhibition</p>
+                        </div>
+                    </div>
+        
+                    <!-- 비디오 2 -->
+                    <div class="vrar12">
+                        <div>
+                            <video id="video22" controls autoplay muted class="video12 video22">
+                                <source src="img/art33.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div>
+                            <p class="Btn2type22">Digital Media Exhibition</p>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+            <div class="vrflex1"> 
+                <!-- 비디오 3 -->
+                <div class="vrar12">
+                    <div>
+                        <video id="video32" controls autoplay muted class="video12 video22">
+                            <source src="img/art22.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div>
+                        <p class="Btn2type22">Digital Media Exhibition</p>
+                    </div>
+                </div>
+    
+                <!-- 비디오 4 -->
+                <div class="vrar12">
+                    <div>
+                        <video id="video42" controls autoplay muted class="video12 video22">
+                            <source src="img/art55.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div>
+                        <p class="Btn2type22">Digital Media Exhibition</p>
+                    </div>
+                </div>
+            </div>
+            <div class="vrflex1">     <!-- 비디오 5 -->
+                <div class="vrar12">
+                    <div>
+                        <video id="video52" controls autoplay muted class="video12 video22">
+                            <source src="img/art99 (2).mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div>
+                        <p class="Btn2type22">Digital Media Exhibition</p>
+                    </div>
+                </div>
+    
+                <!-- 비디오 6 -->
+                <div class="vrar12">
+                    <div>
+                        <video id="video62" controls autoplay muted class="video12 video22">
+                            <source src="img/art77 (1).mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div>
+                        <p class="Btn2type22">Digital Media Exhibition</p>
+                    </div>
+                </div>
+            </div>
+            <div class="vrflex1">     <!-- 비디오 7 -->
+                <div class="vrar12">
+                    <div>
+                        <video id="video72" controls autoplay muted class="video12 video22">
+                            <source src="img/art77 (2).mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div>
+                        <p class="Btn2type22">Digital Media Exhibition</p>
+                    </div>
+                </div>
+    
+                <!-- 비디오 8 -->
+                <div class="vrar12">
+                    <div>
+                        <video id="video82" controls autoplay muted class="video12 video22">
+                            <source src="img/art111.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div>
+                        <p class="Btn2type22">Digital Media Exhibition</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--태블릿-->
+        <div class="VR_AR222">
+            <h2>VR/AR</h2>
+            <div class="vr_ar12">
+                  <!-- 비디오 1 -->
+                <div class="vrar12">
+                        <div>
+                            <video id="video12" controls autoplay muted class="video22 video12">
+                                <source src="img/art11.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div>
+                            <p class="Btn2type22">Digital Media Exhibition</p>
+                        </div>
+                </div>
+        
+                    <!-- 비디오 2 -->
+                <div class="vrar12">
+                        <div>
+                            <video id="video22" controls autoplay muted class="video12 video22">
+                                <source src="img/art33.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div>
+                            <p class="Btn2type22">Digital Media Exhibition</p>
+                        </div>
+                </div>
+                
+            
+            
+                <!-- 비디오 3 -->
+                <div class="vrar12">
+                    <div>
+                        <video id="video32" controls autoplay muted class="video12 video22">
+                            <source src="img/art22.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div>
+                        <p class="Btn2type22">Digital Media Exhibition</p>
+                    </div>
+                </div>
+     
+                <!-- 비디오 4 -->
+                <div class="vrar12">
+                    <div>
+                        <video id="video42" controls autoplay muted class="video12 video22">
+                            <source src="img/art55.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div>
+                        <p class="Btn2type22">Digital Media Exhibition</p>
+                    </div>
+                </div>
+            </div>  
+             <!-- 비디오 5 -->
+            <div class="vr_ar12">  
+                <div class="vrar12">
+                    <div>
+                        <video id="video52" controls autoplay muted class="video12 video22">
+                            <source src="img/art99 (2).mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div>
+                        <p class="Btn2type22">Digital Media Exhibition</p>
+                    </div>
+                </div>
+    
+                <!-- 비디오 6 -->
+                <div class="vrar12">
+                    <div>
+                        <video id="video62" controls autoplay muted class="video12 video22">
+                            <source src="img/art77 (1).mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div>
+                        <p class="Btn2type22">Digital Media Exhibition</p>
+                    </div>
+                </div>
+           
+                <!-- 비디오 7 -->
+                <div class="vrar12">
+                    <div>
+                        <video id="video72" controls autoplay muted class="video12 video22">
+                            <source src="img/art77 (2).mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div>
+                        <p class="Btn2type22">Digital Media Exhibition</p>
+                    </div>
+                </div>
+    
+                <!-- 비디오 8 -->
+                <div class="vrar12">
+                    <div>
+                        <video id="video82" controls autoplay muted class="video12 video22">
+                            <source src="img/art111.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div>
+                        <p class="Btn2type22">Digital Media Exhibition</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+
+<!--데스트탑 training1-->
+        <div class="training1">
+           <h2>Online Training & Workshops</h2>
+
+               <div class="training2">
+                    <div class="training3">
+                        <img src="img/media1.webp">
+                        <div class="trainingtype1">
+                            <h4>가상현실/증강현실로 열리는 몰입형 학습의 세계</h4>
+                        <p class="Content7">Immersive Learning with Virtual Reality <br>(VR) and Augmented Reality (AR): A New World Unfolds</p>
+                        </div>
+                        <div class="trainingtype7">
+                            <h4>가상현실/증강현실로 <br>열리는 몰입형 학습의 세계</h4>
+                        <p class="Content7">Immersive Learning with Virtual Reality <br>(VR) and Augmented Reality (AR): A New World Unfolds</p>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="training3">
+                         <img src="img/media2.webp">
+                        <div class="trainingtype1">
+                            <h4>AI 맞춤형 학습의 혁명: 개개인에 맞춘 학습의 비밀</h4>
+                            <p class="Content7">The AI Revolution in Personalized <br>Learning  Unlocking Tailored Education</p>
+                        </div>
+                    </div>
+                    
+
+                   
+                    <div class="training3">
+                        <img src="img/media3.webp">
+                        <div class="trainingtype1">
+                            <h4>디지털 교육 혁신 미래를 준비하는 첫걸음</h4>
+                        <p class="Content7">Digital Education Innovation <br>The First Step to Preparing for the Future</p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+
+
+<!--모바일 training2-->
+        <div class="training22">
+            <h2>Online Training <br>& Workshops</h2>
+            <div class="slider">
+              <div class="slides">
+                <!-- 마지막 슬라이드 복제 -->
+                <div class="slide">
+                  <img src="img/media3.webp" alt="Digital Education Innovation">
+                    <div class="slidetittle">
+                    <h4>디지털 교육 혁신 미래를 준비하는 첫걸음</h4>
+                    <a class="Content7">Digital Education Innovation <br>The First Step to Preparing for the Future</a>
+                    </div>  
+                </div>
+                <!-- 실제 슬라이드 -->
+                <div class="slide">
+                  <img src="img/media1.webp" alt="VR and AR Learning">
+                    <div class="slidetittle">
+                    <a class="Content8">가상현실(AR)/증강현실(VR)로 <br>열리는 몰입형 학습의 세계</a>
+                    <a class="Content7">Immersive Learning with Virtual Reality <br>(VR) and Augmented Reality (AR): A New World Unfolds</a>
+                    </div>
+                </div>
+                <div class="slide">
+                  <img src="img/media2.webp" alt="AI Personalized Learning">
+                    <div class="slidetittle">
+                    <a class="Content8">AI 맞춤형 학습의 혁명:<br> 개개인에 맞춘 학습의 비밀</a>
+                    <a class="Content7">The AI Revolution in Personalized <br>Learning Unlocking Tailored Education</a>
+                    </div>
+                </div>
+                <div class="slide">
+                  <img src="img/media3.webp" alt="Digital Education Innovation">
+                    <div class="slidetittle">
+                    <a class="Content8">디지털 교육 혁신 <br> 미래를 준비하는 첫걸음</a>
+                    <a class="Content7">Digital Education Innovation <br>The First Step to Preparing for the Future</a>
+                    </div>
+                </div>
+                <!-- 첫 번째 슬라이드 복제 -->
+                <div class="slide">
+                  <img src="img/media1.webp" alt="VR and AR Learning">
+                    <div class="slidetittle">
+                    <a class="Content8">가상현실(AR)/증강현실(VR)로 <br>열리는 몰입형 학습의 세계</a>
+                    <a class="Content7">Immersive Learning with Virtual Reality <br>(VR) and Augmented Reality (AR): A New World Unfolds</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+    
+
+        <div class="news">
+            <h2>이슈</h2>
+            <div class="mainnews">
+                <div class="newsissue1">
+
+                    <div class="newsimg1">
+                       <img src="img/news_1.png">
+                    </div>   
+                    <div class="newstype1">
+                        <h5> "콜라주가 유화를 대체하듯<br> 
+                           브라운관이 캔버스를 대신할 것이다"</h5>
+                        <a class="typesize1">(1970)</a>
+                        <a class="typesize2">백남준</a>
+                        <a href="#" class="typesize3">더보기</a>
+                    </div>
+                </div>   
+                
+                
+                <div class="newsissue3">
+
+                    <div class="newsimg9">
+                       <img src="img/news_2.png">
+                    </div>   
+                    <div class="newstype3"><!--모바일-->
+                        <h5>박물관에서는 누구나 "만지지 마십시오"라고 말한다.<br>
+                             그러나 시각 장애인은 아마도 그 규칙의 유일한 예외가 <br>되어야 할 것이다.</h5>
+                        <a class="typesize1">루브르박물관</a>
+                        <a class="typesize2">Librairie-Boutique du Musée du Louvre</a>
+                        <a href="" class="typesize3">더보기</a>
+                    </div>
+                    <div class="newsimg8">
+                        <img src="img/news_2.png">
+                     </div>   
+                    <div class="newstype7">  <!--데스크탑-->
+                        <h5>박물관에서는 누구나 <br>"만지지 마십시오"라고 말한다.<br>
+                             그러나 시각 장애인은 <br>아마도 그 규칙의 유일한 예외가 <br>되어야 할 것이다.</h5>
+                        <a class="typesize77">루브르박물관</a>
+                        <a class="typesize77">Librairie-Boutique du Musée du Louvre</a>
+                        <a href="" class="typesize3">더보기</a>
+                    </div>
+
+                </div>   
+                
+                <div class="newsissue2">
+
+                    <div class="newsimg1">
+                       <img src="img/news_3.png">
+                    </div>   
+                    <div class="newstype2">
+                        <h5> 가상융합기술(XR)이 적용된<br>
+                             ‘실감교육 콘텐츠 체험학교’</h5>
+                        <a class="typesize1">가상현실(VR), 증강현실(AR)</a>
+                        <a class="typesize2">과학기술정보통신부</a>
+                        <a href="" class="typesize3">더보기</a>
+                    </div>
+                </div>   
+
+
+                <div class="newsissue4">
+
+                    <div class="newsimg99">
+                       <img src="img/news_4.png">
+                    </div>   
+                    <div class="newstype4">
+                        <h5> 예술과 디지털의 융합<br>
+                            '실감형 미디어아트' 뜬다</h5>
+                        <a href="" class="typesize1"> '별이 빛나는 해변'</a>
+                        <a href="" class="typesize2">에이스트릭트</a>
+                        <a href="" class="typesize3">더보기</a>
+                    </div>
+                </div>   
+
+                <!--모바일용 -->
+                <div class="newsissue5">
+                    <div class="newsimg999">
+                       <img src="img/news_4.png">
+                    </div>   
+                    <div class="newstype4">
+                        <h5> "콜라주가 유화를 대체하듯<br> 
+                            브라운관이 캔버스를 대신할 것이다"</h5>
+                         <a class="typesize1">(1970)</a>
+                         <a class="typesize2">백남준</a>
+                         <a href="" class="typesize3">더보기</a>
+                    </div>
+                </div>    
+
+            </div>
+
+
+        </div>
+        
+     <!--데스트탑 배두나 신비.오디오-->
+        <div class="ai">
+            <h2>오디오</h2>
+            <div class="aimain">
+                    <div class="aitop">
+                        <div class="aitopleft">
+                            <div class="kids">
+                                <img src="img2/brown1.png">
+                                <div class="aitype_brown1">
+                                    
+                                    <p class="aitype11">소리와 빛의 여정</p>
+                                    <p class="aitype22">Resonance: </p>
+                                    <p class="aitype22">에코아트 탐험가의 도전</p>
+                                </div>
+                            </div>
+            <!--------------------------------------------------------------위 왼쪽 첫번째칸----------->                
+                            <di,v class="kidsbox">
+                                <div class="kidsbox1">
+                                    <div class="kidsleft"> 
+                                        <img src="img2/kid22.png" style="margin-top: 2vw;">
+                                    </div>
+                                    <div class="kidleftbottom">
+
+                                        <p class="kidtype1">"Resonance: <br>소리와 빛의 여정"</p>
+                                        <p  class="kidtype2">당신만의 멜로디를 들려주세요!</p>
+                                        <p class="kidtype3">헤드셋과 작품의 연동: "음악과 함께 걷는 미디어 아트"
+                                        <br> 관람객이 특정 작품에 가까이 갈수록 작품의 분위기와 감성을 반영한 음악이 헤드셋에 흘러나옵니다.<br>
+                                            음악은 작품의 색채, 움직임, 주제에 따라 맞춤형으로 설계됩니다.</p>
+                                    
+                                    </div>
+                                </div> 
+                                <div class="kidsbox2">   
+                                    <div class="kidsleft"> 
+                                        <img src="img2/kid33.png" style="margin-top: 2vw;">
+                                    </div>
+                                    <div class="kidsrightbottom">
+                                        <p class="kidtype1">"에코아트 탐험가의 도전"</p>
+                                        <p class="kidtype2">작품마다 흥미로운 미션이 숨어 있어요!</p>
+                                        <p class="kidtype3">퍼즐 퀘스트: 작품 속 숨겨진 패턴이나 메시지를 찾아보세요. <br>빛의 방향이나 색의 변화를 관찰해 암호를 풉니다.
+                                            음악 연결: 작품과 흐르는 음악의 감정을 맞춰보세요.<br>
+                                            작품 주변에 설치된 센서를 이용해 특정 동작을 수행하면 작품의 모습이 변화합니다.</p>
+                                        <p></p>
+
+                                    </div>
+                                </div>
+                            </di,v>
+                        </div>
+            <!-------------------------------------------------------------위 오른쪽 두번째칸---->        
+                        <div class="aitopright">
+                            <div class="sound">
+                                <img src="img2/brown2.png">
+                                <div class="aitype_brown2">
+                                    <p class="aitype1">디지털 세계의 이야기</p>
+                                    <p class="aitype2">배두나의 속삭임:<br> 신비와 함께 떠나는 디지털 모험</p>
+                                </div>
+                            </div>
+                        
+                            <div class="soundbox">
+                                <div class="soundbox1">
+                                    <div class="soundleft"> 
+                                        <img src="img/sinbi2.jpg.png">
+                                    
+                                        <p class="soundtype2"></p>
+                                    </div>
+                                    <div class="soundbottom">
+                                    
+                                        <p class="soundtype7">" 신비와 함께 떠나는 디지털 모험 "</p>
+                                        <p class="soundtype3">신비의 익숙한 목소리가 어린이 관객들을 전시의 세계로 안내합니다.<br>
+                                        <p class="soundtype5"> “친구야 여기는 빛과 소리의 마법이 펼쳐지는 곳이야!!<br> 나랑 같이 미션을 찾고 해결해보자.</p>
+                                        <p class="soundtype5"> 이 빛나는 작품에는 몇 개의 색깔이 들어있을까? 나랑 함께 세어보자! ""
+                                            <br>“오, 이 소리가 들리니? 신비 코인이 근처에 있는 신호야!과연 어디에 있을까??”</p>
+                                        <p class="soundtype6"></p>
+                                    </div>
+                                </div> 
+                                <div class="soundbox2">   
+                                    <div class="soundright">
+                                        <img src="img2/duna2.png">
+                                    
+                                    <p class="soundtype2"></p>
+                                    </div>
+                                    <div class="soundrightbottom">
+                                    
+                                        <p class="soundtype1">배두나의 속삭임: 디지털 세계의 이야기</p>
+                                        <p class="soundtype3">배우 배두나와 함께 디지털미디어를 손끝으로 느껴보아요.</p>
+                                        <p class="soundtype4">"안녕하세요? 배우 배두나입니다! 저와 함께 디지털 세계로 들어갈 준비..되셨나요?"</p>
+                                        <p class="soundtype5">“이 작품은 빛과 그림자의 조화를 통해 우리의 감정을 비추는 거울입니다.<br>당신의 마음은 어떤가요? <br>
+                                            작품에 가까이 다가가 보세요, 숨겨진 디테일을 같이 찾아보아요.”</p>
+                                        <p class="soundtype6"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+            
+        
+                    <div class="aibottom">
+                        <div class="aibottomleft">
+                            <div class="aistory2">
+                                <img src="img2/brown3.png">
+                                <div class="aitype_brown3">
+                                    <p class="aitype1">다중 언어 AI 해설</p>
+                                    <p class="aitype2">작품의 주제에 맞는<br>효과음을 제공합니다.</p>
+                                </div>
+                            </div>
+
+                            <div class="storybox">
+                                <div class="storybox1">
+                                    <div class="storyleft"> 
+                                        <img src="img2/ai1.png">
+                                    </div>
+                                    <div class="storybottom">
+                                        <p class="storytype1">다중 언어 AI 해설</p>
+                                        <p class="storytype2">작품의 주제에 맞는 자연의 소리, 음악, 효과음을 제공합니다.</p>
+                                        <p class="storytype3">관람객이 전시장 입구에서 사용하는 언어를 선택하거나, 음성 인식을 통해 AI가 자동으로 언어를 감지합니다.</p>
+                                        <p class="storytype3"></p>
+                                        <p class="storytype3">실시간 번역 및 해설 기능으로 "English"라고 말하면 영어로, "日本語"라고 말하면 일본어로 해설을 제공합니다.</p>
+                                        <p class="storytype3">다양한 언어 지원</p>
+                                        <p class="storytype3">작품의 주제에 맞는 자연의 소리, 음악, 효과음을 들려줌.</p>
+                                        <p class="storytype3">다중 언어 AI 전시관은 관람객의 언어적 다양성을 존중하고, 전시 경험을 전 세계 누구에게나 포용적으로 <br>제공하기 위해 AI 기술을 활용한 혁신적인 전시 공간입니다. <br>이 전시관은 언어 장벽을 허물고 관람객이 자신의 언어로 작품의 이야기를 이해하고 상호작용할 수 있도록 설계되었습니다.</p>
+                                        <p class="storytype3">관람객의 개인 취향에 맞춘 인터랙티브 콘텐츠를 제공해 작품과의 교감을 강화하고, <br>AI 음성 비서가 관람객의 질문에 즉각 답하며 작품에 대한 심화된 정보를 제공합니다.<br> 증강현실(AR)을 활용해 작품의 배경 스토리와 창작 과정을 시각적으로 체험할 수 있도록 하며, <br>전시장 내부의 음성 인식 시스템으로 사용자가 원하는 해설 언어를 선택할 수 있습니다. <br>전시의 마지막 섹션에서는 AI가 관람객의 참여 데이터를 바탕으로 생성한 맞춤형 음악이나 작품을 제공해 <br>전시 경험을 더욱 풍성하게 만듭니다.</p>
+                                    </div>
+                                </div> 
+                               
+                            </div>
+                
+                        </div>
+            <!--------------------------------------------------------------아래쪽 오른쪽.네번째칸---------->
+                        <div class="aibottomright">
+                            <div class="aimind">
+                                <img src="img2/brown4.png">
+                                <div class="aitype_brown4">
+                                    <p class="aitype1">디지털 세계</p>
+                                    <p class="aitype2">시각으로 듣는 전시: <br>텍스트와 진동으로 감각을 열다"</p>
+                                </div>
+                            </div>
+                            <div class="mindbox">
+                                <div class="mindbox1">
+                                    <div class="mindleft"> 
+                                        <img src="img2/aimain444.jpg">
+                                    </div>
+                                    <div class="mindbottom">
+                                        <p class="mindtype1">모두의 예술: 함께 느끼는 디지털 세계</p>
+                                        <p class="mindtype2">시각으로 듣는 전시: 텍스트와 진동으로 감각을 열다"</p>
+                                        <p class="mindtype3">작품의 해설을 디지털 스크린에 텍스트로 제공하여 작품의 배경과 의미를 읽을 수 있도록 합니다.
+                                            <br>스마트폰 앱 또는 전시장에 배치된 진동 장치로 작품의 음악과 리듬을 진동으로 느끼게 합니다.</p>
+                                        <p class="mindtype4">시각장애인을 위한 콘텐츠
+                                            "귀로 보는 전시: 음성 해설과 촉감으로 펼쳐지는 세계"</p>
+                                        <p class="mindtype5">수어(수화) 영상 가이드를 통해 작품 설명을 제공합니다.
+                                                QR 코드를 통해 수어 동영상에 쉽게 접근 가능.</p>
+                                        <p class="mindtype6">작품의 색상, 형태, 움직임, 분위기 등을 생생하게 묘사</p>
+                                        <p class="mindtype7">주요 디지털 조형물의 형태를 3D 프린팅으로 제작해 작품의 형태를 손끝으로 탐색이 가능합니다</p>
+                                        <p class="mindtype8">작품의 주제에 맞는 자연의 소리, 음악, 효과음을 들려줍니다.</p>
+                                        <p class="mindtype9">모두의 예술: 함께 느끼는 디지털 세계는 모든 관람객이 전시를 더욱 풍성하게 경험할 수 있도록 설계되었습니다. <br>작품 해설은 디지털 스크린을 통해 텍스트로 제공되며, <br>스마트폰 앱이나 진동 장치를 통해 작품의 음악과 리듬을 느낄 수 있습니다. <br>시각장애인을 위해 음성 해설과 3D 프린팅 조형물이 제공되어 <br>작품의 형태와 의미를 촉각과 청각으로 탐색할 수 있습니다. <br>수어 영상 가이드와 QR 코드로 접근 가능한 콘텐츠를 통해 청각장애인도 쉽게 전시에 참여할 수 있습니다. <br>자연의 소리, 음악, 효과음을 활용해 작품의 주제와 분위기를 더욱 생생하게 전달합니다.</p>
+                                    </div>
+                                </div> 
+                               
+                            </div>
+                        </div>
+                    
+                    </div> 
+            </div>
+        </div>
+
+        
+       <!--모바일용 배두나.신비 aimain-->
+        <div class="slider-container">
+            <h2>오디오</h2>
+            <div class="slider-track">
+                <div class="slider-item">
+                    <img src="img2/brown1.png" alt="소리와 빛의 여정">
+                     <div class="aitype_brown1">
+                                    <p class="aitype11">소리와 빛의 여정</p>
+                                    <p class="aitype22">Resonance: </p>
+                                    <p class="aitype22">에코아트 탐험가의 도전</p>
+                                </div>
+                </div>
+                <div class="slider-item">
+                    <img src="img2/brown2.png" alt="디지털 세계의 이야기">
+                    <div class="aitype">
+                        <div class="aitype_brown2">
+                            <p class="aitype1">디지털 세계의 이야기</p>
+                            <p class="aitype2">배두나의 속삭임:<br> 신비와 함께 떠나는 디지털 모험</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-item">
+                    <img src="img2/brown3.png" alt="다중 언어 AI 해설">
+                    <div class="aitype_brown3">
+                        <p class="aitype1">다중 언어 AI 해설</p>
+                        <p class="aitype2">작품의 주제에 맞는<br>효과음을 제공합니다.</p>
+                    </div>
+                </div>
+                <div class="slider-item">
+                    <img src="img2/brown4.png" alt="디지털 세계">
+                    <div class="aitype_brown4">
+                        <p class="aitype1">디지털 세계</p>
+                        <p class="aitype2">시각으로 듣는 전시: <br>텍스트와 진동으로 감각을 열다"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="slider-container2">
+            <h2>오디오</h2>
+            <div class="slider-track2">
+                
+                    <div class="slider-item2">
+                        <img src="img2/brown1.png" alt="소리와 빛의 여정" >
+                        <div class="aitype_brown12">
+                                        <p class="aitype111">소리와 빛의 여정</p>
+                                        <p class="aitype333">Resonance: </p>
+                                        <p class="aitype222">에코아트 탐험가의 도전</p>
+                                    </div>
+                    </div>
+                    <div class="slider-item2">
+                        <img src="img2/brown2.png" alt="디지털 세계의 이야기">
+                        <div class="aitype2">
+                            <div class="aitype_brown22">
+                                <p class="aitype111">디지털 세계의 이야기</p>
+                                <p class="aitype222">배두나의 속삭임:<br> 신비와 함께 떠나는 디지털 모험</p>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+                <div class="slider-track2">
+                    <div class="slider-item2">
+                        <img src="img2/brown3.png" alt="다중 언어 AI 해설">
+                        <div class="aitype_brown32">
+                            <p class="aitype111">다중 언어 AI 해설</p>
+                            <p class="aitype222">작품의 주제에 맞는<br>효과음을 제공합니다.</p>
+                        </div>
+                    </div>
+                    <div class="slider-item2">
+                        <img src="img2/brown4.png" alt="디지털 세계">
+                        <div class="aitype_brown4">
+                            <p class="aitype111">디지털 세계</p>
+                            <p class="aitype222">시각으로 듣는 전시: <br>텍스트와 진동으로 감각을 열다"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+
+
+    
+        
+  
+
+       <!--체험-->
+
+        <div class="experience">
+            <h2>체험</h2>
+            <div class="banner_wrapper">
+
+                <div class="banner cosmo enable">
+                    <div class="enable2">
+                        <p class="title"> The Butterfly Trail</p>
+                        <a class="content" href="">Pixel Artworks </a>
+                        <a class="view_more" href="" style="color:#fff;">view more</a>
+                        <div class="mobile_banner_dim"></div>
+                    </div>
+                </div>
+
+                  
+                <div class="banner new_land enable enable33">
+                    <div class="enable3">
+                        <p class="title5"> House of Eternal Return</p>
+                        <a class="content" href="#">  'Immersive Art'(체감예술)</a>
+                        <a class="view_more" href="#" style="color:#fff;">view more</a>
+                        <div class="mobile_banner_dim"></div>
+                    </div>    
+                </div>
+
+                <div class="banner new_creature enable enable44">
+                    <div class="enable4">
+                        <p class="title">Omega Mart</p>
+                        <a class="content"href="#"> Meow Wolf  </a>
+                        <a class="view_more" href="#" style="color:#fff;">view more</a>
+                        <div class="mobile_banner_dim"></div>
+                    </div>    
+                </div>
+
+                <div class="banner space_exploration enable enable55">
+                    <div class="enable5">
+                        <p class="title"> teamLab: LIFE</p>
+                        <a class="content"href="#">손끝에서 피고 지는 꽃들의 향연 </a>
+                        <a class="view_more" href="#" style="color:#fff;">view more</a>
+                        <div class="mobile_banner_dim"></div>
+                    </div>    
+                </div>
+        
+            </div>
+
+
+
+
+        </div>
+
+   <footer1>
+
+        <div class="footerline1"></div>
+        <!--<div class="footer1main">
+            <div class="footercontent1"></div>
+            <div class="footercontent2"></div>
+            <div class="footercontent3"></div>
+        </div>--> 
+
+        <div class="footer-nav2">
+            <div>
+                <a href="#"><button class="button1" onclick="plzwork3()">티켓</button></a>
+            </div>
+            <div>
+                <a href="#"><button class="button2" onclick="plzwork3()">메일링 서비스</button></a>
+            </div>
+            <div>
+                <a href="#"><button class="button2" onclick="plzwork3()">소중한 리뷰를 남겨주세요</button></a>
+            </div>
+        </div>
+
+        <div class="footer-nav3-1">
+            <li><a href="">법적고지</a></li>
+            <li><a href="">개인데이터</a></li>
+            <li><a href="">쿠키</a></li>
+            <li><a href="">접근성</a></li>
+            <li><a href="">크래딧</a></li>
+            <li><a href="">사진 크래딧</a></li>
+        </div>
+
+        <div class="main4 ">
+            <a href=""><img src="img/digiicon11.png"></a>
+            <a href=""><img src="img/digiicon22.png"> </a>
+            <a href=""><img src="img/digiicon33.png"></a>
+            <a href=""><img src="img/digiicon44.png"></a>
+        </div>
+    
+        <div class="footerline2"></div>
+
+        <div class="footer-address">
+            <ul class="footerul">   
+                <li class=company-attr>상호  : ECHO ARTS 대표번호 : 7777-0017 , 사업장 주소  : 서울 미추홀구 인주대로 366번길 (주안동, ECHO ARTS)</li>
+                <li class=company-attr>대표자명 : 백유진  Tel 6460- 5271 (평일 화 - 금  am10 : 30 - pm 6 )</li>
+                <li class=company-attr>Copyright ⓒ 2025 ECHO ARTS All right reserved.</li>
+                <li class=company-attr>이용약관 개인정보처리방침</li>
+                <li class=company-attr>법적 고지 개인데이터 쿠키 접근성 크레딧 사진 크레딧</li>
+              
+            </ul> 
+        </div>
+    
+
+   </footer1>
+
+
+</div>
+</body>  
+
+
+
+<script>
+    const track = document.querySelector('.slider-track');
+    const items = document.querySelectorAll('.slider-item');
+    const itemCount = items.length;
+    let currentIndex = 0;
+
+    function slideToNext() {
+        currentIndex = (currentIndex + 1) % itemCount; // 다음 슬라이드로 이동
+        const offset = -currentIndex * 100; // 슬라이드 이동 계산
+        track.style.transform = `translateX(${offset}%)`;
+    }
+
+    setInterval(slideToNext, 3000); // 3초마다 슬라이드
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+body{
+  /*  background-image:linear-gradient(to right,#800bc8,#a197fa);
+    background-image:-webkit-linear-gradient(to right,#800bc8,#a197fa);
+*/
+    /*background-image:-webkit-linear-gradient(그라디언트 방향 단위는 deg(45deg)to right 위에서 아래로 그라디언트 / top right ( 상단에서 오른쪽 하단으로 줄여주세요.),첫번째 컬러,두번째 컬러) ;*/
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    background:#5d5d5d;
+}
+.button{
+    text-decoration: none;
+    font-size:1.2em;
+    color:whitesmoke;
+    padding:20px 60px;
+    outline:0.5px solid#5c5c5c;
+    position: relative;
+    overflow: hidden;
+
+}
+.button:before{
+    content:'';
+    position: absolute;
+    left:-50px;
+    top:0;
+    width:0%;
+    height:100%;
+    background:#e2e2e2;
+    z-index:-5;/*뒤로 빠져야 해서 -로 */
+    transform:skewX(35deg);
+    transition:width 1s;
+}
+.button:hover{color:#560ba5;}
+.button:hover:before{
+    width:120%
+
+}
+.andyvideo{
+    width:100%;
+    position: relative;
+}
