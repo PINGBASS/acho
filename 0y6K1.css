@@ -47,10 +47,7 @@ body, html{
          box-shadow: 4px 4px 10px rgba(122, 122, 122, 0.5);
       
    }
-   .poster_main2{
-      
-   }
-   
+  .side-nav{display:none;}
    .poster_space1,.poster_space2{
       position: relative;
    }
@@ -1045,7 +1042,7 @@ background-image: url(img/70706.png);
 .image-container2 {
    position: relative;
    display: inline-block;
- 
+   width:100%;
    transition: all 0.3s ease;
 }
 
